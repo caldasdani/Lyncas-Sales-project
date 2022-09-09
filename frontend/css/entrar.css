@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+}
+.azul{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1C3B85;
+}
+.branco{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #F8F8F8;;
+    width: 100vw;
+    height: 100vh;
+}
+#logo{
+    margin-top: 170px;
+}
+#intro{
+    font-family: 'Jost';
+    margin-top: 65px;
+    width: 447px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 35px;
+    text-align: center;
+    color: #D9D9D9;
+}
+#entrar{
+    margin-top: 170px;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 58px;
+    text-align: center;
+    color: #26324B;
+}
+#login{
+    background: #03C874;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 344px;
+    height: 39px;
+    left: 766px;
+    bottom: 274px;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+    color: #FFFFFF;
+    margin-top: 24px;
+    border: none;
+}
+.branco input{
+    background: #FFFFFF;
+    border: 1px solid #E5EBF1;
+    border-radius: 4px;
+    width: 345px;
+    height: 38px;
+    margin-top: 11px;
+}

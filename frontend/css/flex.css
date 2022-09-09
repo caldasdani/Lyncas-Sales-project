@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: row;
+}
+.navbar-container{
+    display: flex;
+    flex-direction: column;
+    width: 168px;
+    height: 100vh;
+    background: #274A9D;
+    align-items: center;
+    margin-left: 168px;
+}
+.logo-container{
+    margin-top: 75px;
+}
+.navitens-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 130px;
+    gap: 21px;
+}
+.navitens-container button{
+    display: flex;
+    align-items: center;
+    padding-left: 13px;
+    font-family: 'Jost';
+    border: 1px solid #1C3B85;
+    width: 136px;
+    height: 36px;
+    font-size: 16px;
+    border-radius: 4px;
+    background: none ;
+    color: white;
+    cursor: pointer;  
+    gap: 10px;
+}
+.head-container{
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    margin-top: 63px;
+    align-items: center;
+    margin-left: 18px;
+    border-bottom: 2px solid #E5EBF1;
+    padding-bottom: 26px;
+}
+#foto_perfil{
+    object-fit: cover;
+    border-radius: 5px ;
+    height: 50px;
+}
+#voltar{
+    padding-left: 25px;
+    padding-right: 25px;
+    cursor: pointer;
+    font-family: 'Jost';
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 30px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    background: #BFBFBF;
+    color:white;
+    border: none;
+}
+#ola{
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 18px;
+    cursor: default;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+}
+.main-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#bemvindo{
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 180px;
+    font-size: 20px;
+    line-height: 29px;
+    color: rgba(38, 50, 75, 1);
+}
+#logout{
+    position: absolute;
+    cursor: pointer;
+    font-family: 'Jost';
+    height: 22px;
+    left: 421px;
+    top: 100px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: rgba(117, 127, 152, 1);
+    text-decoration: none;
+}
