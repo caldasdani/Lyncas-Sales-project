@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bem-vindo</title>
-    <link rel="stylesheet" href="./css/flex.css">
+    <title>Dashboard Clientes</title>
+    <link rel="stylesheet" href="./css/dash_cliente.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
             <img id="logo" src="./img/logo-lyncas-branco.png" width="100px">
         </div>
         <div class="navitens-container">
-            <button><img class= "minilogo" src="./img/dashboard-icon.png"><a href="./dashboard.html"></a>Dashboard</button>
+            <a href="./dashboard.html"><button><img class= "minilogo" src="./img/dashboard-icon.png">Dashboard</button></a>
             <button><img class= "minilogo" src="./img/clientes-icon.png">Clientes</button>
             <a href="./dash_venda.html"><button><img class= "minilogo" src="./img/shopping-cart-icon.png">Vendas</button></a>
         </div>
@@ -33,7 +33,70 @@
             </div>
         </header>
         <main class="main-container">
-            <p>CLIENTEEEEEEEE</p>
+            <div class="lista_pesquisa">
+                <p id="titulo">Lista de clientes</p>
+                <input type="text" id="input" placeholder="Buscar cliente...">
+            </div>
+            <div id="tabela">
+                <table>
+                    <thead class="thead">
+                        <tr>
+                            <td>Nome</td> 
+                            <td>E-mail</td>
+                            <td>Telefone</td>
+                            <td>CPF</td>
+                            <td>Ações</td>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody">
+                        <tr>
+                            <td>Daniel Caldas</td>
+                            <td>daniel@gmail</td>
+                            <td>2190909090</td>
+                            <td>000.111.222-33</td>
+                            <td><button>Deletar</button><button>Editar</button></td>
+                        </tr>
+                        <tr>
+                            <td>Cristiano Ronaldo</td>
+                            <td>cr7@hotmail.com</td>
+                            <td>2190909090</td>
+                            <td>000.111.222-33</td>
+                            <td><button>Deletar</button><button>Editar</button></td>
+                        </tr>
+                        <tr>
+                            <td>Fausto Silva</td>
+                            <td>faustao@yahoo</td>
+                            <td>2190909090</td>
+                            <td>000.111.222-33</td>
+                            <td><button>Deletar</button><button>Editar</button></td>
+                        </tr>
+                        <tr>
+                            <td>Joao Ninguem</td>
+                            <td>ninguem@gmail</td>
+                            <td>2190909090</td>
+                            <td>000.555.888-33</td>
+                            <td><button>Deletar</button><button>Editar</button></td>
+                        </tr>
+                        <tr>
+                            <td>Genara Sousa</td>
+                            <td>genara7sousa@gmail.com</td>
+                            <td>2190909090</td>
+                            <td>000.111.222-33</td>
+                            <td><button>Deletar</button><button>Editar</button></td>
+                        </tr>
+                        <tr>
+                            <td>Genara Sousa</td>
+                            <td>genara7sousa@gmail.com</td>
+                            <td>2190909090</td>
+                            <td>000.111.222-33</td>
+                            <td><button>Deletar</button><button>Editar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="botao">
+                <a href="./add_cliente.html"><button id="add_button">Adicionar</button></a>
+            </div>
         </main>
     </section>
 </body>

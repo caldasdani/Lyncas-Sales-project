@@ -1,6 +1,6 @@
-*{
-    padding: 0;
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 body{
@@ -80,12 +80,6 @@ body{
     font-weight: 700;
     font-size: 15px;
 }
-.main-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
 #logout{
     position: absolute;
     cursor: pointer;
@@ -99,12 +93,27 @@ body{
     color: rgba(117, 127, 152, 1);
     text-decoration: none;
 }
-#bemvindo{
+.main-container{
+    display: flex;
+    flex-direction: column;
+}
+#titulo{
     font-family: 'Jost';
     font-style: normal;
-    font-weight: 700;
-    margin-top: 180px;
-    font-size: 20px;
-    line-height: 29px;
-    color: rgba(38, 50, 75, 1);
+    font-weight: 500;
+    font-size: 25px;
+    color: #26324B;
+    padding-left: 20px;
+}
+#salvar{
+    width: 150px;
+    height: 30px;
+    background: #03C874;
+    color: #FFFFFF;
+    border-radius: 4px;
+    font-family: 'Jost';
+    font-style: normal;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
 }
