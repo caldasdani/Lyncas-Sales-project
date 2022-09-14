@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/add_cliente.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar-container">
@@ -37,23 +37,29 @@
                 <p id="titulo">Adicionar cliente</p>
             </div>
             <form>
-                <div class="input_container">
-                    <label for="nome">Nome</label>
-                    <input id="nome" type="text">
+                <div class="input1">
+                    <div class="input_container">
+                        <label for="nome">Nome</label>
+                        <input id="nome" type="text">
+                    </div>
+                    <div class="input_container">
+                        <label for="e-mail">E-mail</label>
+                        <input id="email" type="text">
+                    </div>
                 </div>
-                <div class="input_container">
-                    <label for="e-mail">E-mail</label>
-                    <input id="email" type="text">
+                <div class="input1">
+                    <div class="input_container">
+                        <label for="telefone">Telefone</label>
+                        <input id="telefone" type="text">
+                    </div>
+                    <div class="input_container">
+                        <label for="cpf">CPF</label>
+                        <input id="cpf" type="text">
+                    </div>
                 </div>
-                <div class="input_container">
-                    <label for="telefone">Telefone</label>
-                    <input id="telefone" type="text">
+                <div class="botao">
+                    <button type="submit" id="salvar">Salvar</button>
                 </div>
-                <div class="input_container">
-                    <label for="cpf">CPF</label>
-                    <input id="cpf" type="text">
-                </div>
-                <button type="submit" id="salvar">Salvar</button>
             </form>
         </main>
     </section>
