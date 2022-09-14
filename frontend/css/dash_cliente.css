@@ -90,20 +90,6 @@ section{
     margin-right: 50px;
     margin-left: 50px;
 }
-#voltar{
-    padding-left: 25px;
-    padding-right: 25px;
-    cursor: pointer;
-    font-family: 'Jost';
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 30px;
-    border: 1px solid gray;
-    border-radius: 4px;
-    background: #BFBFBF;
-    color:white;
-    border: none;
-}
 .lista_pesquisa{
     display: flex;
     justify-content: space-between;
