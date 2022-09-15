@@ -163,7 +163,7 @@ section{
 }
 #add_button{
     width: 150px;
-    height: 30px;
+    height: 40px;
     background: #03C874;
     color: #FFFFFF;
     border-radius: 4px;
@@ -179,6 +179,7 @@ section{
     font-weight: 500;
     font-size: 0.875em;
     color: #C27476;
+    cursor: pointer;
     width: 6.290625vw;
     height: 5.8236272878535775vh;
     background-color: #FDF6F6;
@@ -191,6 +192,7 @@ section{
     font-weight: 500;
     font-size: 0.875em;
     color: #5B89C7;
+    cursor: pointer;
     width: 5.90078125vw;
     height: 5.8236272878535775vh;
     background-color: #F6FAFD;
