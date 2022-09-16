@@ -41,11 +41,14 @@ body{
 }
 .head-container{
     display: flex;
-    justify-content: space-between;
     margin-top: 63px;
     align-items: center;
     border-bottom: 2px solid #E5EBF1;
     padding-bottom: 26px;
+}
+.head-itens-container{
+    display: flex;
+    flex-direction: column;   
 }
 #profile_pic{
     object-fit: cover;
@@ -53,33 +56,28 @@ body{
     height: 50px;
 }
 #hello{
-    position: absolute;
-    margin-top: 8px;
-    margin-left: 18px;
     cursor: default;
+    margin-left: 20px;
     font-family: 'Jost';
     font-style: normal;
     font-weight: 700;
     font-size: 15px;
+}
+#logout{
+    cursor: pointer;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    margin-left: 20px;
+    font-size: 14px;
+    color: rgba(117, 127, 152, 1);
+    text-decoration: none;
 }
 .main-container{
     display: flex;
     align-items: center;
     justify-content: center;
     
-}
-#logout{
-    position: absolute;
-    cursor: pointer;
-    font-family: 'Jost';
-    height: 22px;
-    left: 278px;
-    top: 95px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    color: rgba(117, 127, 152, 1);
-    text-decoration: none;
 }
 #welcome{
     font-family: 'Jost';
@@ -107,37 +105,57 @@ section{
     .navbar-container{
         display: flex;
         width: 100%;
+        justify-content: center;
         height: 75px;
         background: #274A9D;
     }
     .logo-container{
         display: none;
     }
+    #logout{
+        display: none;
+    }
     .navitens-container{
         display: flex;
-        flex-direction: row;
+        flex-direction: row; 
         margin-top: 0px;
         gap: 0px;
+        justify-content: space-around;
+        width: 100%;
     }
     .navitens-container button{
         display: flex;
         flex-direction: column;
-        align-items: center;
-        padding-left: 0px;
+        padding: 0px;
         border: none;
-        width: 100%;
         font-size: 14px;
         gap: 0px;
     }
+    .main-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }    
     #welcome{
-        margin-top: 0px;
+        margin-top: 10%;
     }   
     section{
         margin-right: 0px;
         margin-left: 0px;
     }
-
-
+    .head-container{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 38px;
+        padding-left: 15%;
+        align-items: center;
+        border-bottom: 2px solid #E5EBF1;
+        padding-bottom: 25px;
+    }
+    #hello{
+        width: 30px;
+    }
 }
 
     
