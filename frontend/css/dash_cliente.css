@@ -48,55 +48,49 @@ body{
     border-bottom: 2px solid #E5EBF1;
     padding-bottom: 26px;
 }
-#foto_perfil{
-    object-fit: cover;
-    border-radius: 5px ;
-    height: 50px;
+.head-itens-container{
+    display: flex;
+    flex-direction: column;
 }
-#ola{
-    position: absolute;
-    margin-top: 8px;
-    margin-left: 18px;
+.profile{
+    display: flex;
+}
+#hello{
     cursor: default;
+    margin-left: 20px;
     font-family: 'Jost';
     font-style: normal;
     font-weight: 700;
     font-size: 15px;
+    margin-top: 6px;
 }
 #logout{
-    position: absolute;
     cursor: pointer;
     font-family: 'Jost';
-    height: 22px;
-    left: 278px;
-    top: 95px;
     font-style: normal;
     font-weight: 500;
+    margin-left: 20px;
     font-size: 14px;
     color: rgba(117, 127, 152, 1);
     text-decoration: none;
 }
-#bemvindo{
-    font-family: 'Jost';
-    font-style: normal;
-    font-weight: 700;
-    margin-top: 180px;
-    font-size: 20px;
-    line-height: 29px;
-    color: rgba(38, 50, 75, 1);
+#profile_pic{
+    object-fit: cover;
+    border-radius: 5px ;
+    height: 50px;
 }
 section{
     width: 100%;
     margin-right: 50px;
     margin-left: 50px;
 }
-.lista_pesquisa{
+.search_list{
     display: flex;
     justify-content: space-between;
     margin-top: 35px;
     padding-bottom: 15px;
 }
-#titulo{
+#title{
     font-family: 'Jost';
     font-style: normal;
     font-weight: 500;
@@ -115,12 +109,12 @@ section{
     font-weight: 400;
     font-size: 14px;
 }
-#tabela{
+#table{
     width: 100%;
     height: 260px;
     overflow-y: auto;
 }
-#tabela table{
+#table table{
     border-spacing: 0 20px;
     width: 100%;
 }
@@ -155,12 +149,6 @@ section{
     border-top-right-radius: 5px; 
     border-bottom-right-radius: 5px;
 }
-#botao{
-    display: flex;
-    align-items: flex-end;
-    justify-content: end;
-    padding-top: 15px;
-}
 #add_button{
     width: 150px;
     height: 40px;
@@ -174,7 +162,7 @@ section{
     border: none;
     cursor: pointer;
 }
-.botao1{
+.btt1{
     font-family: 'Jost', sans-serif;
     font-weight: 500;
     font-size: 0.875em;
@@ -187,7 +175,7 @@ section{
     border-radius: 5px;
     margin-right: 0.625vw;
 }
-.botao2{
+.btt2{
     font-family: 'Jost', sans-serif;
     font-weight: 500;
     font-size: 0.875em;

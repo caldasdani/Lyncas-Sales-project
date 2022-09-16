@@ -48,30 +48,33 @@ body{
     border-bottom: 2px solid #E5EBF1;
     padding-bottom: 26px;
 }
-#foto_perfil{
+.head-itens-container{
+    display: flex;
+    flex-direction: column;
+}
+.profile{
+    display: flex;
+}
+#profile_pic{
     object-fit: cover;
     border-radius: 5px ;
     height: 50px;
 }
-#ola{
-    position: absolute;
-    margin-top: 8px;
-    margin-left: 18px;
+#hello{
     cursor: default;
+    margin-left: 20px;
     font-family: 'Jost';
     font-style: normal;
     font-weight: 700;
     font-size: 15px;
+    margin-top: 6px;
 }
 #logout{
-    position: absolute;
     cursor: pointer;
     font-family: 'Jost';
-    height: 22px;
-    left: 278px;
-    top: 95px;
     font-style: normal;
     font-weight: 500;
+    margin-left: 20px;
     font-size: 14px;
     color: rgba(117, 127, 152, 1);
     text-decoration: none;
@@ -81,7 +84,7 @@ section{
     margin-right: 50px;
     margin-left: 50px;
 }
-#voltar{
+#back{
     padding-left: 25px;
     padding-right: 25px;
     cursor: pointer;
@@ -111,7 +114,7 @@ section{
     display: flex;
     flex-direction: column;
 }
-#titulo{
+#title{
     font-family: 'Jost';
     font-style: normal;
     font-weight: 700;
@@ -122,12 +125,12 @@ section{
     padding-top: 30px;
     padding-bottom: 50px;
 }
-.botao{
+.btt{
     display: flex;
     justify-content: end;
     padding-right: 40px;
 }
-#salvar{
+#save{
     width: 150px;
     height: 30px;
     background: #03C874;

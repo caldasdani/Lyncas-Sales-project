@@ -23,18 +23,22 @@
     </nav>
     <section>
         <header class="head-container">
+            <div class="profile">
+                <div>
+                    <img id="profile_pic" src="./img/perfil.jpeg" width="50px">
+                </div>
+                <div class="head-itens-container">   
+                    <span id="hello">Olá Caldas</span>
+                    <a href="./entrar.html" id="logout">Sair</a>
+                </div>
+            </div>    
             <div>
-                <img id="foto_perfil" src="./img/perfil.jpeg" width="50px">
-                <span id="ola">Olá Caldas</span>
-                <a href="./entrar.html" id="logout">Sair</a>
-            </div>
-            <div>
-                <a href="./dash_cliente.html"><button id="voltar">Voltar</button></a>
+                <a href="./dash_cliente.html"><button id="back">Voltar</button></a>
             </div>
         </header>
         <main class="main-container">
             <div>
-                <p id="titulo">Adicionar cliente</p>
+                <p id="title">Adicionar cliente</p>
             </div>
             <form>
                 <div class="input1">
@@ -57,8 +61,8 @@
                         <input id="cpf" type="text">
                     </div>
                 </div>
-                <div class="botao">
-                    <button type="submit" id="salvar">Salvar</button>
+                <div class="btt">
+                    <button type="submit" id="save">Salvar</button>
                 </div>
             </form>
         </main>
