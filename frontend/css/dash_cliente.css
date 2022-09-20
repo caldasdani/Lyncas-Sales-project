@@ -54,6 +54,7 @@ body{
 }
 .profile{
     display: flex;
+    width: 100%;
 }
 #hello{
     cursor: default;
@@ -74,10 +75,26 @@ body{
     color: rgba(117, 127, 152, 1);
     text-decoration: none;
 }
+#logout2{
+    display: none;
+}
 #profile_pic{
     object-fit: cover;
     border-radius: 5px ;
     height: 50px;
+}
+#add_button{
+    width: 150px;
+    height: 40px;
+    background: #03C874;
+    color: #FFFFFF;
+    border-radius: 4px;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
 }
 section{
     width: 100%;
@@ -149,19 +166,6 @@ section{
     border-top-right-radius: 5px; 
     border-bottom-right-radius: 5px;
 }
-#add_button{
-    width: 150px;
-    height: 40px;
-    background: #03C874;
-    color: #FFFFFF;
-    border-radius: 4px;
-    font-family: 'Jost';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
 .btt1{
     font-family: 'Jost', sans-serif;
     font-weight: 500;
@@ -186,4 +190,72 @@ section{
     background-color: #F6FAFD;
     border: 1px solid #EEF1F7;
     border-radius: 5px;
+}
+
+
+@media (max-width: 768px){
+    body{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        background: #E5E5E5;
+        height: 100vh;
+    }
+    .navbar-container{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        height: 75px;
+        background: #274A9D;
+    }
+    .logo-container{
+        display: none;
+    }
+    .navitens-container{
+        display: flex;
+        flex-direction: row; 
+        margin-top: 0px;
+        gap: 0px;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .navitens-container button{
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+        border: none;
+        font-size: 14px;
+        gap: 0px;
+    } 
+    section{
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    .head-container{
+        display: flex;
+        margin-top: 38px;
+        padding-left: 60px;
+        border-bottom: 2px solid #E5EBF1;
+        padding-bottom: 25px;
+    }
+    .head-itens-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    #hello{
+        width: 30px;
+    }
+    #logout{
+        display: none;
+    }
+    #logout2{
+        display: flex;
+        padding-right: 60px;
+    }
+    #btt{
+        display: none;
+    }
 }

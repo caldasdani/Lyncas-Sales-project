@@ -24,41 +24,52 @@
     <section>
         <header class="head-container">
             <div>
-                <img id="foto_perfil" src="./img/perfil.jpeg" width="50px">
-                <span id="ola">Olá Caldas</span>
+                <img id="profile_pic" src="./img/perfil.jpeg" width="50px">
+                <span id="hello">Olá Caldas</span>
                 <a href="./entrar.html" id="logout">Sair</a>
             </div>
             <div>
-                <a href="./dash_venda.html"><button id="voltar">Voltar</button></a>
+                <a href="./dash_venda.html"><button id="back">Voltar</button></a>
             </div>
         </header>
         <main class="main-container">
             <div>
-                <p id="titulo">Adicionar venda</p>
+                <p id="title">Adicionar venda</p>
             </div>
             <form>
                 <div class="input1">
                     <div class="input_container">
-                        <label for="nome">Nome</label>
+                        <label for="nome">Cliente</label>
                         <input id="nome" type="text">
                     </div>
                     <div class="input_container">
-                        <label for="e-mail">E-mail</label>
-                        <input id="email" type="text">
+                        <label for="data">Data do faturamento</label>
+                        <input id="data" type="text">
                     </div>
                 </div>
-                <div class="input1">
+            </form>
+            <div>
+                <p id="title2">Itens do pedido</p>
+            </div>
+            <form>
+                <div class="input2">
                     <div class="input_container">
-                        <label for="telefone">Telefone</label>
-                        <input id="telefone" type="text">
+                        <label for="description">Descrição do item</label>
+                        <input id="desc" type="text">
                     </div>
                     <div class="input_container">
-                        <label for="cpf">CPF</label>
-                        <input id="cpf" type="text">
+                        <label for="unit">Valor Unitário</label>
+                        <input id="unit" type="text">
                     </div>
-                </div>
-                <div class="botao">
-                    <button type="submit" id="salvar">Salvar</button>
+                <div class="input2">
+                    <div class="input_container">
+                        <label for="quantity">Quantidade</label>
+                        <input id="quant" type="text">
+                    </div>
+                    <div class="input_container">
+                        <label for="total">Valor total</label>
+                        <input id="total" type="text">
+                    </div>
                 </div>
             </form>
         </main>
