@@ -39,6 +39,10 @@ body{
     cursor: pointer;  
     gap: 10px;
 }
+.navitens-container a{
+    text-decoration: none;
+    
+}
 .head-container{
     display: flex;
     margin-top: 63px;
