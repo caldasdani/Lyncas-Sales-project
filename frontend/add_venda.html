@@ -23,55 +23,69 @@
     </nav>
     <section>
         <header class="head-container">
-            <div>
-                <img id="profile_pic" src="./img/perfil.jpeg" width="50px">
-                <span id="hello">Olá Caldas</span>
-                <a href="./entrar.html" id="logout">Sair</a>
-            </div>
-            <div>
+            <div class="profile">
+                <div>
+                    <img id="profile_pic" src="./img/perfil.jpeg" width="50px">
+                </div>
+                <div class="head-itens-container">   
+                    <span id="hello">Olá Caldas</span>
+                    <a href="./entrar.html" id="logout">Sair</a>
+                </div>
+            </div>    
+            <div class="header_responsive">
                 <a href="./dash_venda.html"><button id="back">Voltar</button></a>
+                <a href="./dash_venda.html"><img src="./img/arrow-left.png" id="back2"></a>
+                <p id="title_responsive">Adicionar</p>
             </div>
         </header>
         <main class="main-container">
             <div>
                 <p id="title">Adicionar venda</p>
             </div>
-            <form>
+            <form class="form_itens1">
                 <div class="input1">
                     <div class="input_container">
                         <label for="nome">Cliente</label>
-                        <input id="nome" type="text">
+                        <input id="nome" required type="text">
                     </div>
                     <div class="input_container">
                         <label for="data">Data do faturamento</label>
-                        <input id="data" type="text">
+                        <input id="data" required type="date">
                     </div>
                 </div>
             </form>
             <div>
                 <p id="title2">Itens do pedido</p>
             </div>
-            <form>
+            <form class="form_itens2">
                 <div class="input2">
                     <div class="input_container">
                         <label for="description">Descrição do item</label>
-                        <input id="desc" type="text">
+                        <input id="desc" required type="text">
                     </div>
                     <div class="input_container">
                         <label for="unit">Valor Unitário</label>
-                        <input id="unit" type="text">
+                        <input id="unit" required type="text">
                     </div>
+                </div>
                 <div class="input2">
                     <div class="input_container">
                         <label for="quantity">Quantidade</label>
-                        <input id="quant" type="text">
+                        <input id="quant" required type="number">
                     </div>
                     <div class="input_container">
                         <label for="total">Valor total</label>
-                        <input id="total" type="text">
+                        <input id="total" required type="text">
                     </div>
                 </div>
+                <div class="more_itens_div">
+                    <button id="more_itens">+ Mais itens</button>
+                </div>
             </form>
+            <div class="baseline">
+                <p>Total: R$25.550,00</p>
+                <button type="submit">Salvar</button>
+            </div>
         </main>
     </section>
 </body>

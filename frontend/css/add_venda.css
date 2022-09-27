@@ -40,6 +40,9 @@ body{
     cursor: pointer;  
     gap: 10px;
 }
+.navitens-container a{
+    text-decoration: none;
+}
 .head-container{
     display: flex;
     justify-content: space-between;
@@ -98,6 +101,9 @@ section{
     color:white;
     border: none;
 }
+#back2{
+    display: none;
+}
 .main-container{
     display: flex;
     flex-direction: column;
@@ -105,10 +111,11 @@ section{
     background: #FFFFFF;
     border: 1px solid #E5EBF1;
     border-radius: 5px;
-    margin-top: 50px;
-    height: 350px;
+    margin-top: 30px;
+    height: 360px;
     margin-left: 60px;
     margin-right: 60px;
+    overflow-y: auto;
 }
 .input_container{
     display: flex;
@@ -123,7 +130,10 @@ section{
     color: #26324B;
     padding-left: 40px;
     padding-top: 30px;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
+}
+#title_responsive{
+    display: none;
 }
 #title2{
     font-family: 'Jost';
@@ -133,6 +143,8 @@ section{
     line-height: 26px;
     color: #26324B;
     padding-left: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 .btt{
     display: flex;
@@ -157,35 +169,6 @@ form{
     display: flex;
     flex-direction: column;
 }
-.input1{
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
-}
-.input2{
-    display: flex;
-    
-    justify-content: space-between;
-    padding-bottom: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
-}
-.input1 input{
-    background: #FFFFFF;
-    border: 1px solid #E5EBF1;
-    border-radius: 4px;
-    width: 324px;
-    height: 38px;
-}
-.input2 input{
-    background: #FFFFFF;
-    border: 1px solid #E5EBF1;
-    border-radius: 4px;
-    width: 324px;
-    height: 38px;
-}
 label{
     font-family: 'Jost';
     font-style: normal;
@@ -194,4 +177,92 @@ label{
     line-height: 23px;
     color: #7B828D;
 }
-
+.form_itens1{
+    padding-left: 40px;
+    padding-right: 40px;
+    
+}
+.input1{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 2px dashed rgba(229, 235, 241, 1);
+}
+.input1 input{
+    background: #FFFFFF;
+    border: 1px solid #E5EBF1;
+    border-radius: 4px;
+    width: 324px;
+    height: 38px;
+    padding-left: 15px;
+}
+.form_itens2{ 
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.input2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+.input2 input{
+    background: #FFFFFF;
+    border: 1px solid #E5EBF1;
+    border-radius: 4px;
+    width: 324px;
+    height: 38px;
+    padding-left: 15px;
+}
+.more_itens_div{
+    display: flex;
+    justify-content: end;
+    border-bottom: 2px dashed rgba(229, 235, 241, 1);
+    padding-bottom: 20px;
+}
+#more_itens{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 324px;
+    border-radius: 4px;
+    border: 2px solid rgba(39, 74, 157, 1);
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+    color: #274A9D;
+    cursor: pointer;
+}
+.baseline{
+    display: flex;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: space-between;
+}
+.baseline button{
+    width: 324px;
+    height: 39px;
+    right: 220px;
+    background: #03C874;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.baseline p{
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 35px;
+    color: #26324B;
+}
