@@ -209,6 +209,7 @@ label{
         font-size: 24px;
         line-height: 35px;
         color: #26324B;
+        padding-left: 30%;
     }
     .main-container{
         display: flex;

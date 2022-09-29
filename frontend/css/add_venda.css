@@ -266,3 +266,96 @@ label{
     line-height: 35px;
     color: #26324B;
 }
+@media (max-width: 768px){
+
+    .navbar-container{
+        display: none;
+    }
+    .profile{
+        display: none;
+    }
+    .header_responsive{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        height: 50px;
+        padding-top: 0;
+        margin-top: 0;
+    }
+    #back{
+        display: none;
+    }
+    #back2{
+        display: flex;
+    }
+    #title{
+        display:none;
+    }
+    #title_responsive{
+        display: flex;
+        font-family: 'Jost';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 35px;
+        color: #26324B;
+        padding-left: 30%;
+    }
+    #title2{
+        display: flex;
+        font-family: 'Jost';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 35px;
+        color: #26324B;
+        padding-left: 30%;
+    }
+    .main-container{
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        background: none;
+        border: none;
+        border-radius: 0px;
+        margin-top: 30px;
+        height: 100%;
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .input_container{
+        display: flex;
+        flex-direction: column;
+    }
+    .input1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin-top: 10px;
+        gap: 10px;
+    }
+    .form_itens2{ 
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .input2{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 0px;
+        align-items: center;
+    }
+    .more_itens_div{
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .baseline{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
