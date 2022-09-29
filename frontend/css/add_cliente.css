@@ -40,6 +40,9 @@ body{
     cursor: pointer;  
     gap: 10px;
 }
+.navitens-container a{
+    text-decoration: none;
+}
 .head-container{
     display: flex;
     justify-content: space-between;
@@ -48,30 +51,33 @@ body{
     border-bottom: 2px solid #E5EBF1;
     padding-bottom: 26px;
 }
-#foto_perfil{
+.head-itens-container{
+    display: flex;
+    flex-direction: column;
+}
+.profile{
+    display: flex;
+}
+#profile_pic{
     object-fit: cover;
     border-radius: 5px ;
     height: 50px;
 }
-#ola{
-    position: absolute;
-    margin-top: 8px;
-    margin-left: 18px;
+#hello{
     cursor: default;
+    margin-left: 20px;
     font-family: 'Jost';
     font-style: normal;
     font-weight: 700;
     font-size: 15px;
+    margin-top: 6px;
 }
 #logout{
-    position: absolute;
     cursor: pointer;
     font-family: 'Jost';
-    height: 22px;
-    left: 278px;
-    top: 95px;
     font-style: normal;
     font-weight: 500;
+    margin-left: 20px;
     font-size: 14px;
     color: rgba(117, 127, 152, 1);
     text-decoration: none;
@@ -81,7 +87,7 @@ section{
     margin-right: 50px;
     margin-left: 50px;
 }
-#voltar{
+#back{
     padding-left: 25px;
     padding-right: 25px;
     cursor: pointer;
@@ -94,6 +100,12 @@ section{
     background: #BFBFBF;
     color:white;
     border: none;
+}
+#back2{
+    display: none;
+}
+#title2{
+    display: none;
 }
 .main-container{
     display: flex;
@@ -111,7 +123,7 @@ section{
     display: flex;
     flex-direction: column;
 }
-#titulo{
+#title{
     font-family: 'Jost';
     font-style: normal;
     font-weight: 700;
@@ -122,12 +134,12 @@ section{
     padding-top: 30px;
     padding-bottom: 50px;
 }
-.botao{
+.btt{
     display: flex;
     justify-content: end;
     padding-right: 40px;
 }
-#salvar{
+#save{
     width: 150px;
     height: 30px;
     background: #03C874;
@@ -168,3 +180,74 @@ label{
     color: #7B828D;
 }
 
+@media (max-width: 768px){
+
+    .navbar-container{
+        display: none;
+    }
+    .profile{
+        display: none;
+    }
+    .header_responsive{
+        display: flex;
+        width: 100%;
+    }
+    #back{
+        display: none;
+    }
+    #back2{
+        display: flex;
+    }
+    #title{
+        display:none;
+    }
+    #title2{
+        display: flex;
+        font-family: 'Jost';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 35px;
+        color: #26324B;
+    }
+    .main-container{
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        background: none;
+        border: none;
+        border-radius: 0px;
+        margin-top: 30px;
+        height: 100%;
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .input_container{
+        display: flex;
+        flex-direction: column;
+    }
+    .input1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin-top: 10px;
+        gap: 10px;
+    }
+    .input1 input{
+        background: #FFFFFF;
+        justify-content: center;
+        border: 1px solid #E5EBF1;
+        padding-left: 10px;
+        border-radius: 4px;
+        width: 324px;
+        height: 38px;
+    }
+    .btt{
+        display: flex;
+        justify-content: center;
+        padding-right: 0px;
+        margin-top: 40px;
+    }
+}

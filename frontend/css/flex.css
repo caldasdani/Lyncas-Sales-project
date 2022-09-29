@@ -39,6 +39,10 @@ body{
     cursor: pointer;  
     gap: 10px;
 }
+.navitens-container a{
+    text-decoration: none;
+    
+}
 .head-container{
     display: flex;
     margin-top: 63px;
@@ -72,6 +76,9 @@ body{
     font-size: 14px;
     color: rgba(117, 127, 152, 1);
     text-decoration: none;
+}
+#logout2{
+    display: none;
 }
 .main-container{
     display: flex;
@@ -112,9 +119,6 @@ section{
     .logo-container{
         display: none;
     }
-    #logout{
-        display: none;
-    }
     .navitens-container{
         display: flex;
         flex-direction: row; 
@@ -146,16 +150,27 @@ section{
     }
     .head-container{
         display: flex;
-        justify-content: space-between;
         margin-top: 38px;
-        padding-left: 15%;
-        align-items: center;
+        padding-left: 60px;
         border-bottom: 2px solid #E5EBF1;
         padding-bottom: 25px;
+    }
+    .head-itens-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
     }
     #hello{
         width: 30px;
     }
+    #logout{
+        display: none;
+    }
+    #logout2{
+        display: flex;
+        padding-right: 60px;
+    }
 }
-
     
