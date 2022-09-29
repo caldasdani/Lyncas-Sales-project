@@ -1,0 +1,201 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: row;
+    background: #E5E5E5;
+}
+.navbar-container{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 100vh;
+    background: #274A9D;
+    align-items: center;
+}
+.logo-container{
+    margin-top: 75px;
+}
+.navitens-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 130px;
+    gap: 21px;
+}
+.navitens-container button{
+    display: flex;
+    align-items: center;
+    padding-left: 13px;
+    font-family: 'Jost';
+    border: 1px solid #1C3B85;
+    width: 136px;
+    height: 36px;
+    font-size: 16px;
+    border-radius: 4px;
+    background: none ;
+    color: white;
+    cursor: pointer;  
+    gap: 10px;
+}
+.head-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 63px;
+    align-items: center;
+    border-bottom: 2px solid #E5EBF1;
+    padding-bottom: 26px;
+}
+#foto_perfil{
+    object-fit: cover;
+    border-radius: 5px ;
+    height: 50px;
+}
+#ola{
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 18px;
+    cursor: default;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+}
+#logout{
+    position: absolute;
+    cursor: pointer;
+    font-family: 'Jost';
+    height: 22px;
+    left: 278px;
+    top: 95px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: rgba(117, 127, 152, 1);
+    text-decoration: none;
+}
+#bemvindo{
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 180px;
+    font-size: 20px;
+    line-height: 29px;
+    color: rgba(38, 50, 75, 1);
+}
+section{
+    width: 100%;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+.lista_pesquisa{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+    padding-bottom: 15px;
+}
+#titulo{
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    color: #26324B;
+}
+#input{
+    border: 1px solid #E5EBF1;
+    border-radius: 5px;
+    background: #FFFFFF;
+    width: 300px;
+    height: 30px;
+    padding-left: 19px;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+}
+#tabela{
+    width: 100%;
+    height: 260px;
+    overflow-y: auto;
+}
+#tabela table{
+    border-spacing: 0 20px;
+    width: 100%;
+}
+.thead{
+    margin-top: 10px;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    color: #7B828D;
+}
+.tbody{
+    height: 220px;
+    border-spacing: 0px 10px;
+}
+.tbody tr{
+    background: #FFFFFF;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: #26324B;
+    height: 50px;
+}
+.tbody tr td:first-child{
+    padding-left: 10px;
+    border-top-left-radius: 5px; 
+    border-bottom-left-radius: 5px;
+}
+.tbody tr td:last-child{
+    border-top-right-radius: 5px; 
+    border-bottom-right-radius: 5px;
+}
+#botao{
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    padding-top: 15px;
+}
+#add_button{
+    width: 150px;
+    height: 40px;
+    background: #03C874;
+    color: #FFFFFF;
+    border-radius: 4px;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.botao1{
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 0.875em;
+    color: #C27476;
+    cursor: pointer;
+    width: 6.290625vw;
+    height: 5.8236272878535775vh;
+    background-color: #FDF6F6;
+    border: 1px solid #F7EEEE;
+    border-radius: 5px;
+    margin-right: 0.625vw;
+}
+.botao2{
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 0.875em;
+    color: #5B89C7;
+    cursor: pointer;
+    width: 5.90078125vw;
+    height: 5.8236272878535775vh;
+    background-color: #F6FAFD;
+    border: 1px solid #EEF1F7;
+    border-radius: 5px;
+}

@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+}
+hr {
+	border: 0;
+	border-top: 10px solid #094CFA;
+}
+body{
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center;
+}
+#retangulo{
+    background: #274A9D;
+    margin-left: 120px;
+    padding-left: 25px;
+    padding-right: 25px;
+    height: 592px;
+    left: 168px;
+    top: 0px;
+    float: left;          
+}
+#logo{
+    margin-top: 75px;
+    margin-bottom: 10px;
+    position: relative;    
+}
+.botao{
+    display: flex;
+    cursor: pointer;
+    padding-left: 13px;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    font-family: 'Jost';
+    width: 136px;
+    font-size: 16px;
+    border: 1px solid #1C3B85;
+    border-radius: 4px;
+    background: none ;
+    color: white 
+}
+.minilogo{
+    margin-bottom: 1px;
+    margin-top: 2px;
+    margin-right: 10px;
+    font-weight: 400;
+}
+#lider{
+    margin-top: 130px;
+}
+#foto_perfil{
+    margin-top: 63px;
+    margin-left: 32px;
+    border-radius: 5px ;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+}
+#bemvindo{
+    position: absolute;
+    left: 678px;
+    top: 330px;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+    color: rgba(38, 50, 75, 1);
+}
+#ola{
+    position: absolute;
+    cursor: default;
+    font-family: 'Jost';
+    left: 420px;
+    top: 63px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+}
+#logout{
+    position: absolute;
+    cursor: pointer;
+    height: 22px;
+    left: 421px;
+    top: 100px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgba(117, 127, 152, 1);
+}
+#voltar{
+    position:absolute;
+    cursor: pointer;
+    top:85px;
+    left: 1000px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-family: 'Jost';
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 29px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    background: #BFBFBF;
+    color:white  
+}
+
