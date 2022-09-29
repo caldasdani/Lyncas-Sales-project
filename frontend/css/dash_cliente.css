@@ -135,14 +135,17 @@ section{
 #input2{
     display: none;
 }
-#table{
+.table{
     width: 100%;
     height: 260px;
     overflow-y: auto;
 }
-#table table{
+.table table{
     border-spacing: 0 20px;
     width: 100%;
+}
+.table_responsive{
+    display: none;
 }
 .thead{
     margin-top: 10px;
@@ -319,9 +322,48 @@ section{
         font-weight: 400;
         font-size: 14px;
     }
-    #table{
-        height: fit-content;
-        overflow-y: hidden;
+    .table{
+        display:none;
     }
-    
+    .table_responsive{
+        display: flex;
+        width: 100%;
+        height: 200px;
+        overflow-y: auto;  
+    }
+    .table_responsive table{
+        border-spacing: 0 20px;
+        width: 100%;
+    }
+    .tbody_responsive tr{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: #FFFFFF;
+        font-family: 'Jost';
+        font-style: normal;
+        margin-bottom: 10px;
+        padding-left: 10px;
+        font-weight: 500;
+        font-size: 14px;
+        color: #26324B;
+        height: 50px;
+        border-radius: 5px;
+    }
+    #cpf{
+        font-family: 'Jost';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: #BFBFBF;
+    }
+    #data{
+        font-family: 'Jost';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: #BFBFBF;
+    }
 }

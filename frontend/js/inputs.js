@@ -23,6 +23,15 @@ input2.addEventListener('keypress', () => {
   }
 })
 
+// const input_valor = document.querySelector('#unit')
+// input_valor.addEventListener('keypress', () => {
+//   let input_valorLength = input_valor.value.length
+
+//   if (input_valorLength == 2){
+//     input_valor.value += ','
+//   }
+// })
+
 //--------------------------------------------------------
 
 // FUNÇOES DE VALIDAÇÃO 
@@ -67,8 +76,7 @@ input2.addEventListener('keypress', () => {
     const emailPassou = re.test(valorEmail);
 
     console.log("email passou? " + emailPassou);
-    return emailPassou;
-    
+    return emailPassou; 
   }
 
   
@@ -88,6 +96,7 @@ input2.addEventListener('keypress', () => {
 
         if(inputsPassaramNasRegras){
             alert("Cliente Cadastrado")
+            window.location.href = "dash_cliente.html"
         }        
     }
 
