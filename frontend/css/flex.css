@@ -7,13 +7,14 @@ body{
     display: flex;
     background: #E5E5E5;
 }
-.navbar-container{
+.navbar-container {
     display: flex;
     flex-direction: column;
     width: 200px;
     height: 100vh;
     background: #274A9D;
     align-items: center;
+    position: fixed;
 }
 .logo-container{
     margin-top: 75px;
@@ -41,7 +42,6 @@ body{
 }
 .navitens-container a{
     text-decoration: none;
-    
 }
 .head-container{
     display: flex;
@@ -84,7 +84,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 #welcome{
     font-family: 'Jost';
@@ -95,19 +94,15 @@ body{
     line-height: 29px;
     color: rgba(38, 50, 75, 1);
 }
-section{
+section {
     width: 100%;
     margin-right: 50px;
-    margin-left: 50px;
+    margin-left: 250px;
 }
 
 @media (max-width: 768px){
     body{
-        display: flex;
         flex-direction: column-reverse;
-        justify-content: space-between;
-        background: #E5E5E5;
-        height: 100vh;
     }
     .navbar-container{
         display: flex;
@@ -135,18 +130,11 @@ section{
         font-size: 14px;
         gap: 0px;
     }
-    .main-container{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-    }    
-    #welcome{
-        margin-top: 10%;
-    }   
+         
     section{
         margin-right: 0px;
         margin-left: 0px;
+        height: 100vh;
     }
     .head-container{
         display: flex;
@@ -162,9 +150,6 @@ section{
         justify-content: space-between;
         width: 100%;
     }
-    #hello{
-        width: 30px;
-    }
     #logout{
         display: none;
     }
@@ -172,5 +157,8 @@ section{
         display: flex;
         padding-right: 60px;
     }
-}
-    
+    #welcome{
+        margin-top: 30%;
+        position: relative;
+    }
+} 
