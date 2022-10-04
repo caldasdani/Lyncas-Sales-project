@@ -110,29 +110,77 @@
                 <table>
                     <tbody class="tbody_responsive">
                         <tr>
-                            <td>Daniel Caldas</td>
-                            <td id="cpf">000.111.222-33</td>
+                            <div id="client">
+                                <td>Daniel Caldas</td>
+                                <td id="cpf">000.111.222-33</td>
+                            </div>
+                            <td>              
+                                <button id="open_details"><img src="./img/Profile.png"></button>
+                            </td>
                         </tr>
                         <tr>
-                            <td>Cristiano Ronaldo</td>
-                            <td id="cpf">000.111.222-33</td>
+                            <div id="client">
+                                <td>Cristiano Ronaldo</td>
+                                <td id="cpf">000.111.222-33</td>
+                            </div>
+                            <div>                       
+                                <td><button id="open_details"><img src="./img/Profile.png"></button></td>
+                            </div>
                         </tr>
                         <tr>
+                            <div id="client">
                             <td>Fausto Silva</td>                            
-                            <td id="cpf">000.111.222-33</td>     
+                            <td id="cpf">000.111.222-33</td>
+                            </div>     
+                            <div>                       
+                                <td><button id="open_details"><img src="./img/Profile.png"></button></td>
+                            </div>
                         </tr>
                         <tr>
+                            <div id="client">
                             <td>Joao Ninguem</td>                           
-                            <td id="cpf">000.555.888-33</td>                          
+                            <td id="cpf">000.555.888-33</td>
+                            </div>
+                            <div>                       
+                                <td><button id="open_details"><img src="./img/Profile.png"></button></td>
+                            </div>
+                                                    
                         </tr>
                         <tr>
+                            <div id="client">
                             <td>Genara Sousa</td>
-                            <td id="cpf">000.111.222-33</td>                          
+                            <td id="cpf">000.111.222-33</td> 
+                            </div>                              
+                            <div>                       
+                            <td><button id="open_details"><img src="./img/Profile.png"></button></td>
+                            </div>
                         </tr>
                     </tbody>
                 </table>
             </div>
+            <div id="fade" class="hide"></div>
+            <div id="modal" class="hide">
+                <div id="header_modal">
+                    <a id= "close_details" href="./dash_cliente.html"><img src="./img/arrow-left.png"></a>
+                    <p>Detalhes</p>
+                    <a href="*"><img src="./img/Group 42.png"></a>
+                </div>
+                <div id="inputs_modal" >
+                    <label for="nome">Nome</label>
+                    <input id="nome" value="Nome do cliente" type="text" readonly>
+
+                    <label for="cpf">CPF</label>
+                    <input id="cpf" value="000.000.000-00" type="text" readonly >
+
+                    <label for="e-mail">E-mail</label>
+                    <input id="email" value="cliente@email.com" type="email" readonly>
+
+                    <label for="telefone">Telefone</label>
+                    <input id="tel" value="(21) 00000-1111" type="text" readonly>
+                </div>
+            </div>
         </main>
     </section>
+    <script src="./js/modais.js"></script>
 </body>
 </html>

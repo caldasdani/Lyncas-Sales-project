@@ -81,19 +81,43 @@
                         </div>
                     </div>
                     <div class="more_itens_div">
-                        <button id="more_itens" onclick="">+ Mais itens</button>
+                        <button id="more_itens" type="button">+ Mais itens</button>
                     </div>
                 </div>
                 <div class="baseline">
-                    <div>
+                    <div id="total">
                         <p>Total: R$25.550,00</p>
                     </div>
                     <div id="btt">
-                        <button>Salvar</button>
+                        <button type="submit">Salvar</button>
                     </div>
                 </div>
             </form>
+            <div id="fade_add" class="hide"></div>
+            <div id="modal_add" class="hide">
+                <div id="modal_x">
+                    <a href="./add_venda.html" id="close_modal"><img src="./img/x.png"></a>
+                </div>
+                <div id="header_modal">
+                    <p>Adicionar item</p>
+                </div>
+                <div id="inputs_modal" >
+                    <label for="item">Descrição do item</label>
+                    <input id="desc" type="text">
+
+                    <label for="valor">Valor unitário</label>
+                    <input id="valor" type="text" >
+
+                    <label for="quant">Quantidade</label>
+                    <input id="quant" type="number">
+                </div>
+                <div id="button_modal">
+                    <button>Adicionar</button>
+                </div>
+            </div>
         </main>
     </section>
+    <script src="./js/inputs.js"></script>
+    <script src="./js/modal_add.js"></script>
 </body>
 </html>  
