@@ -263,6 +263,101 @@ label{
     line-height: 35px;
     color: #26324B;
 }
+#fade_add{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+#modal_add{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    padding: 50px;
+    position: absolute;
+    width: 389px;
+    height: 476px;  
+    background: #F8F8F8;
+    border-radius: 10px;
+}
+#modal_add, #fade_add{
+    transition: 0.5s;
+    opacity: 1;
+    pointer-events: all;
+}
+#modal_add.hide, #fade_add.hide{
+    opacity: 0;
+    pointer-events: none;
+}
+#header_modal{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+#header_modal p{
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 35px;
+    color: #26324B;
+}
+#modal_x{
+    display: flex;
+    justify-content: end;
+}
+#inputs_modal{
+    display: flex;
+    flex-direction: column;
+}
+#modal.hide{
+    top: 0;
+}
+label{
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    color: #7B828D;
+}
+input{
+    border: 1px solid #E5EBF1;
+    border-radius: 4px;
+    height: 38px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+}   
+#button_modal button{
+    margin-top: 20px;
+    width: 100%;
+    background: #03C874;
+    border-radius: 4px;
+    height: 38px;
+    border: none;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
 @media (max-width: 768px){
 
     section {
@@ -376,98 +471,7 @@ label{
     #btt{
         padding-left: 0px;
     }
-    #fade_add{
-        display: flex;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.6);
-        z-index: 5;
-    }
     #modal_add{
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 10;
-        padding: 50px;
-        position: absolute;
-        width: 389px;
-        height: 476px;  
-        background: #F8F8F8;
-        border-radius: 10px;
-    }
-    #modal_add, #fade_add{
-        transition: 0.5s;
-        opacity: 1;
-        pointer-events: all;
-    }
-    #modal_add.hide, #fade_add.hide{
-        opacity: 0;
-        pointer-events: none;
-    }
-    #header_modal{
-        display: flex;
-        justify-content: center;
-        height: 50px;
-        align-items: center;
-        margin-bottom: 30px;
-    }
-    #header_modal p{
-        font-family: 'Jost';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 35px;
-        color: #26324B;
-    }
-    #modal_x{
-        display: flex;
-        justify-content: end;
-    }
-    #inputs_modal{
-        display: flex;
-        flex-direction: column;
-    }
-    #modal.hide{
-        top: 0;
-    }
-    label{
-        font-family: 'Jost';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 23px;
-        color: #7B828D;
-    }
-    input{
-        border: 1px solid #E5EBF1;
-        border-radius: 4px;
-        height: 38px;
-        padding-left: 15px;
-        margin-bottom: 10px;
-        font-family: 'Jost';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 23px;
-    }   
-    #button_modal button{
-        margin-top: 20px;
-        width: 100%;
-        background: #03C874;
-        border-radius: 4px;
-        height: 38px;
-        border: none;
-        font-family: 'Jost';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 29px;
-        color: #FFFFFF;
+        top: 100%;
     }
 }
