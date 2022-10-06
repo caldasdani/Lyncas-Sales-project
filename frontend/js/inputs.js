@@ -101,3 +101,20 @@ input2.addEventListener('keypress', () => {
     }
 
 form.addEventListener('submit', validarTudo)
+
+//-----------------------------------------------------
+// FUNCIONALIDADE DO BOTÃO MAIS ITENS
+
+    // let orderBox = document.querySelector('.form_itens2');
+    // let clonedItem = document.querySelector('.cloned_form')
+    // let moreItensButton = document.querySelector('#more_items');
+    
+    // //Clona o elemento com o método cloneNode e o insere em uma variável
+    // let clonedBox = () => {
+    //     return orderBox.cloneNode(true);
+    // }
+    // //Criar  função que insere o elemento ao final da página com o appendChild ao clicar no botão Mais Itens
+    // let useClone = () => clonedItem.insertAdjacentElement("beforeend", clonedBox())
+        
+    
+    // moreItensButton.addEventListener('click', useClone);

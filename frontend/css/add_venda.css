@@ -15,6 +15,7 @@ body{
     height: 100vh;
     background: #274A9D;
     align-items: center;
+    position: fixed;
 }
 .logo-container{
     margin-top: 75px;
@@ -82,18 +83,18 @@ body{
     color: rgba(117, 127, 152, 1);
     text-decoration: none;
 }
-section{
+section {
     width: 100%;
     margin-right: 50px;
-    margin-left: 50px;
+    margin-left: 250px;
 }
 #back{
-    padding-left: 25px;
-    padding-right: 25px;
     cursor: pointer;
+    width: 140px;
+    height: 40px;
     font-family: 'Jost';
     font-weight: 600;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 30px;
     border: 1px solid gray;
     border-radius: 4px;
@@ -113,13 +114,7 @@ section{
     border-radius: 5px;
     margin-top: 30px;
     height: 360px;
-    margin-left: 60px;
-    margin-right: 60px;
     overflow-y: auto;
-}
-.input_container{
-    display: flex;
-    flex-direction: column;
 }
 #title{
     font-family: 'Jost';
@@ -146,25 +141,6 @@ section{
     padding-top: 15px;
     padding-bottom: 15px;
 }
-.btt{
-    display: flex;
-    justify-content: end;
-    padding-right: 40px;
-}
-#save{
-    width: 150px;
-    height: 30px;
-    background: #03C874;
-    color: #FFFFFF;
-    border-radius: 4px;
-    font-family: 'Jost';
-    font-style: normal;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    width: 324px;
-    height: 38px;
-}
 form{
     display: flex;
     flex-direction: column;
@@ -177,26 +153,39 @@ label{
     line-height: 23px;
     color: #7B828D;
 }
+.input_container1{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-right: 15px;
+}
+.input_container2{
+    display: flex;
+    flex-direction: column;
+    width: 100%;  
+    padding-left: 15px; 
+}
 .form_itens1{
     padding-left: 40px;
     padding-right: 40px;
-    
 }
 .input1{
     display: flex;
     justify-content: space-between;
     padding-bottom: 20px;
-    border-bottom: 2px dashed rgba(229, 235, 241, 1);
+    border-bottom: 2px dashed rgba(229, 235, 241, 1);  
 }
 .input1 input{
     background: #FFFFFF;
     border: 1px solid #E5EBF1;
     border-radius: 4px;
-    width: 324px;
+    width: 100%;
     height: 38px;
     padding-left: 15px;
 }
 .form_itens2{ 
+    display: flex;
+    flex-direction: column;
     padding-left: 40px;
     padding-right: 40px;
 }
@@ -210,22 +199,23 @@ label{
     background: #FFFFFF;
     border: 1px solid #E5EBF1;
     border-radius: 4px;
-    width: 324px;
+    width: 100%;
     height: 38px;
     padding-left: 15px;
 }
 .more_itens_div{
     display: flex;
-    justify-content: end;
-    border-bottom: 2px dashed rgba(229, 235, 241, 1);
+    width: 50%;
+    align-self: end;
     padding-bottom: 20px;
+    padding-left: 15px;
 }
 #more_itens{
     display: flex;
     align-items: center;
     justify-content: center;
     height: 40px;
-    width: 324px;
+    width: 100%;
     border-radius: 4px;
     border: 2px solid rgba(39, 74, 157, 1);
     font-family: 'Jost';
@@ -238,18 +228,25 @@ label{
 }
 .baseline{
     display: flex;
-    padding-left: 40px;
-    padding-right: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
     padding-top: 20px;
     padding-bottom: 20px;
+    border-top: 2px dashed rgba(229, 235, 241, 1);
+}
+.baseline div{
+    width: 100%;
+    align-items: flex-end;
     justify-content: space-between;
 }
+#btt{
+    padding-left: 20px;
+}
 .baseline button{
-    width: 324px;
     height: 39px;
-    right: 220px;
     background: #03C874;
     border: none;
+    width: 100%;
     border-radius: 4px;
     font-family: 'Jost';
     font-style: normal;
@@ -266,8 +263,108 @@ label{
     line-height: 35px;
     color: #26324B;
 }
+#fade_add{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+#modal_add{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    padding: 50px;
+    position: absolute;
+    width: 389px;
+    height: 476px;  
+    background: #F8F8F8;
+    border-radius: 10px;
+}
+#modal_add, #fade_add{
+    transition: 0.5s;
+    opacity: 1;
+    pointer-events: all;
+}
+#modal_add.hide, #fade_add.hide{
+    opacity: 0;
+    pointer-events: none;
+}
+#header_modal{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+#header_modal p{
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 35px;
+    color: #26324B;
+}
+#modal_x{
+    display: flex;
+    justify-content: end;
+}
+#inputs_modal{
+    display: flex;
+    flex-direction: column;
+}
+#modal.hide{
+    top: 0;
+}
+label{
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    color: #7B828D;
+}
+input{
+    border: 1px solid #E5EBF1;
+    border-radius: 4px;
+    height: 38px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+}   
+#button_modal button{
+    margin-top: 20px;
+    width: 100%;
+    background: #03C874;
+    border-radius: 4px;
+    height: 38px;
+    border: none;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
 @media (max-width: 768px){
 
+    section {
+        width: 100%;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
     .navbar-container{
         display: none;
     }
@@ -287,6 +384,7 @@ label{
     }
     #back2{
         display: flex;
+        padding-left: 60px;
     }
     #title{
         display:none;
@@ -299,7 +397,7 @@ label{
         font-size: 24px;
         line-height: 35px;
         color: #26324B;
-        padding-left: 30%;
+        padding-left: 23%;
     }
     #title2{
         display: flex;
@@ -309,7 +407,7 @@ label{
         font-size: 24px;
         line-height: 35px;
         color: #26324B;
-        padding-left: 30%;
+        padding-left: 33%;
     }
     .main-container{
         display: flex;
@@ -324,9 +422,17 @@ label{
         margin-left: 0px;
         margin-right: 0px;
     }
-    .input_container{
+    .input_container1{
         display: flex;
         flex-direction: column;
+    }
+    .input_container1{
+        padding: 0;
+        padding-bottom: 10px;
+    }
+    .input_container2{
+        padding: 0;
+        padding-bottom: 10px;
     }
     .input1{
         display: flex;
@@ -334,7 +440,7 @@ label{
         align-items: center;
         padding: 0;
         margin-top: 10px;
-        gap: 10px;
+        gap: 0px;
     }
     .form_itens2{ 
         padding-left: 40px;
@@ -348,14 +454,24 @@ label{
     }
     .more_itens_div{
         display: flex;
-        justify-content: center;
+        width: 100%;
+        padding-left: 0;
         padding-top: 20px;
         padding-bottom: 20px;
     }
     .baseline{
         display: flex;
         flex-direction: column;
-        align-items: center;
         gap: 10px;
+    }
+    #total{
+        display: flex;
+        justify-content: center;
+    }
+    #btt{
+        padding-left: 0px;
+    }
+    #modal_add{
+        top: 100%;
     }
 }
