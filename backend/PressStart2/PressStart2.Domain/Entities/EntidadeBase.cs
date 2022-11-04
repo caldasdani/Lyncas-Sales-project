@@ -1,8 +1,9 @@
-﻿using System;
+﻿using prmToolkit.NotificationPattern;
 
-public class Class1
+namespace PressStart2.Domain.Entities { 
+public class EntidadeBase : Notifiable
 {
-	public Class1()
-	{
+	public Guid Id {get; private set;}
+		
 	}
 }

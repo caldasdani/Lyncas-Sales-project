@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\danie\\source\\repos\\PressStart2\\PressStart2.Domain\\PressStart2.Domain.csproj": {}
+    "C:\\Users\\danie\\source\\repos\\PressStart2\\PressStart2.Infra.CrossCutting\\PressStart2.Infra.CrossCutting.csproj": {}
   },
   "projects": {
-    "C:\\Users\\danie\\source\\repos\\PressStart2\\PressStart2.Domain\\PressStart2.Domain.csproj": {
+    "C:\\Users\\danie\\source\\repos\\PressStart2\\PressStart2.Infra.CrossCutting\\PressStart2.Infra.CrossCutting.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\danie\\source\\repos\\PressStart2\\PressStart2.Domain\\PressStart2.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\danie\\source\\repos\\PressStart2\\PressStart2.Infra.CrossCutting\\PressStart2.Infra.CrossCutting.csproj",
         "projectName": "PressStart2.Domain",
-        "projectPath": "C:\\Users\\danie\\source\\repos\\PressStart2\\PressStart2.Domain\\PressStart2.Domain.csproj",
+        "projectPath": "C:\\Users\\danie\\source\\repos\\PressStart2\\PressStart2.Infra.CrossCutting\\PressStart2.Infra.CrossCutting.csproj",
         "packagesPath": "C:\\Users\\danie\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\danie\\source\\repos\\PressStart2\\PressStart2.Domain\\obj\\",
         "projectStyle": "PackageReference",
@@ -39,16 +39,6 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "dependencies": {
-            "MediatR.Extensions.Microsoft.DependencyInjection": {
-              "target": "Package",
-              "version": "[11.0.0, )"
-            },
-            "prmToolkit.NotificationPattern": {
-              "target": "Package",
-              "version": "[1.1.5, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
