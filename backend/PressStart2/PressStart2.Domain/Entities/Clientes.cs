@@ -1,5 +1,6 @@
 ﻿using System;
 using PressStart2.Domain.Entities;
+using PressStart2.Domain.Entities.Contracts;
 
 namespace PressStart2.Domain.Entities
 {
@@ -22,7 +23,7 @@ namespace PressStart2.Domain.Entities
             Telefone = telefone;
             FlagAtivo = true;
 
-            //this.AdicionarClienteContract();
+            this.AdicionarClienteContract();
         }
 
         public void Atualizar(string nome, string email, string cpf, string telefone)
@@ -33,7 +34,7 @@ namespace PressStart2.Domain.Entities
             Cpf = cpf;
             Telefone = telefone;
 
-            //this.AtualizarClienteContract();
+            this.AtualizarClienteContract();
         }
         public void Inativar()
             //Metodo para inativar cliente --> Cliente.Inativar

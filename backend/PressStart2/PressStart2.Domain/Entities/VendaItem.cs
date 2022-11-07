@@ -1,4 +1,5 @@
 ﻿using PressStart2.Domain.Entities;
+using PressStart2.Domain.Entities.Contracts;
 using System;
 using System.Security.Cryptography.X509Certificates;
 
@@ -17,6 +18,8 @@ public class VendaItem : EntidadeBase // a classe vendaitem está herdando oq co
 		ValorUnitario = valorUnitario;
 		Quantidade = quantidade;
 		ValorTotal = valorTotal;
+
+		this.AdicionarVendaItemContract();
 	}
 	public void Atualizar(string? descricaoItem, decimal valorUnitario, int quantidade, decimal valorTotal)
 	{
@@ -24,5 +27,7 @@ public class VendaItem : EntidadeBase // a classe vendaitem está herdando oq co
         ValorUnitario = valorUnitario;
         Quantidade = quantidade;
         ValorTotal = valorTotal;
+
+		this.AtualizarVendaItemContract();
     }
 }
