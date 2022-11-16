@@ -7,9 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\" />
-    <Folder Include="DTOs\" />
-    <Folder Include="Interfaces\" />
+    <Folder Include="Commands\AtualizarCliente\" />
+    <Folder Include="Commands\AtualizarVenda\" />
+    <Folder Include="Commands\ListarVenda\" />
+    <Folder Include="Commands\RemoverCliente\" />
+    <Folder Include="Commands\RemoverVenda\" />
+    <Folder Include="Commands\ObterCliente\" />
+    <Folder Include="Commands\ObterVenda\" />
+    <Folder Include="Commands\AdicionarVenda\" />
   </ItemGroup>
 
   <ItemGroup>
