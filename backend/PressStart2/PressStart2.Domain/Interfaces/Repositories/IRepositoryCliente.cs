@@ -9,5 +9,7 @@ namespace PressStart2.Domain.Interfaces.Repositories
 {
     public interface IRepositoryCliente : IRepositoryBase<Cliente>
     {
+        bool VerificaDuplicidade(string cpf);
+
     }
 }

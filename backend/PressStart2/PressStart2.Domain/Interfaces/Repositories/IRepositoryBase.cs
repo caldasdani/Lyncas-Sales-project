@@ -10,8 +10,7 @@ namespace PressStart2.Domain.Interfaces.Repositories
         TEntity Obter(Guid id);
         void Adicionar (TEntity entity);
         void Atualizar (TEntity entity);
-        void Remover (TEntity entity);
-        void VerificaDuplicidade(TEntity entity);
+        void Remover (TEntity entity);      
         void Commit();
     }
 }
