@@ -5,7 +5,7 @@ using PressStart2.Domain.Entities;
 
 namespace PressStart2.Infra.Data.Configurations
 {
-    internal class ClienteConfiguration : IEntityTypeConfiguration<Cliente>
+    public class ClienteConfiguration : IEntityTypeConfiguration<Cliente>
     {
         public void Configure(EntityTypeBuilder<Cliente> builder)
         {

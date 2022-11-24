@@ -4,7 +4,7 @@ using MediatR;
 using PressStart2.Domain.Commands;
 using PressStart2.Domain.Commands.ListarCliente;
 using PressStart2.Domain.Commands.AdicionarCliente;
-
+using PressStart2.Domain.Commands.ObterCliente;
 
 namespace PressStart2.Api.Controllers
 {
@@ -25,6 +25,13 @@ namespace PressStart2.Api.Controllers
         {
             var listaClientes = await _mediator.Send(new ListarClienteRequest());
                 return Ok(listaClientes);
+        }
+
+        [HttpGet("Obter/{id}")]
+        public async Task<IActionResult> Obter(Guid id)
+        {
+            var cliente = await _mediator.Send(new ObterClienteRequest(id));
+            return Ok(cliente);
         }
 
         [HttpPost("Adicionar}")]

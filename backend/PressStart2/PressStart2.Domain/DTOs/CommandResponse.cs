@@ -1,4 +1,5 @@
-﻿using prmToolkit.NotificationPattern;
+﻿using PressStart2.Domain.Commands.ObterCliente;
+using prmToolkit.NotificationPattern;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,8 @@ namespace PressStart2.Domain.DTOs
 {
     public class CommandResponse
     {
+        private ObterClienteResponse obterClienteResponse;
+
         public bool Sucesso { get; }
         public object Dados { get; }
         public IEnumerable<Notification> Notificacoes { get; }
@@ -25,6 +28,11 @@ namespace PressStart2.Domain.DTOs
             Sucesso = false;
             Dados = null;
             Notificacoes = notificacoes.Notifications;
+        }
+
+        public CommandResponse(ObterClienteResponse obterClienteResponse)
+        {
+            this.obterClienteResponse = obterClienteResponse;
         }
     }
 
