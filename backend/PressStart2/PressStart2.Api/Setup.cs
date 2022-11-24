@@ -7,7 +7,7 @@ using PressStart2.Infra.Data.Repositories;
 
 namespace PressStart2.Api
 {
-    public static class Setup // criando metodos para colocar no Program.cs (organização)
+    public static class Setup // criando metodos de extensao para colocar no Program.cs (organização)
     {
         public static void ConfigureDbContext(this IServiceCollection services, string connectionString)
         {

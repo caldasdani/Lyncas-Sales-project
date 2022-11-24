@@ -15,6 +15,8 @@ namespace PressStart2.Infra.Data.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Ignore<Notification>();
+
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(PressStart2Context).Assembly);
             
             base.OnModelCreating(modelBuilder);
         }

@@ -9,7 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.ConfigureDbContext(builder.Configuration.GetConnectionString("PressStartDB"));
+builder.Services.ConfigureDbContext(builder.Configuration.GetConnectionString("PS2Connection"));
 builder.Services.ConfigureRepository();
 builder.Services.ConfigureMediator();
 
