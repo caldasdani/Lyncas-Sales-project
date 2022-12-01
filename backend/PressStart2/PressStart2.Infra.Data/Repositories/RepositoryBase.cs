@@ -9,11 +9,12 @@ namespace PressStart2.Infra.Data.Repositories
     {
         protected readonly DbSet<TEntity> DbSet;
         protected readonly PressStart2Context _context;
-        private PressStart2Context context;
+        
 
         public RepositoryBase(PressStart2Context context)
         {
-            this.context = context;
+            DbSet = context.Set<TEntity>();
+            _context = context;
         }
 
         public void Adicionar(TEntity entity)

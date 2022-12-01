@@ -3,11 +3,7 @@ using PressStart2.Domain.Commands.AtualizarCliente;
 using PressStart2.Domain.DTOs;
 using PressStart2.Domain.Interfaces.Repositories;
 using prmToolkit.NotificationPattern;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace PressStart2.Domain.Commands.RemoverCliente
 {

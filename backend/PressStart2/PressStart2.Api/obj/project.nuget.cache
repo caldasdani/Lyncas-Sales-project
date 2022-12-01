@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "DX1WfEusJ/b85oWoCcS9FvCE04Ol2wz21dskP8WKGZDToFxcyhjIxRO5uc11q/iakc/QlEUVCAC5ff2TZX3O6A==",
+  "dgSpecHash": "6ndbxD6I5M4IS+oEnDb9f3GYRa/pVlkQfbmmPmUG49b4mltxf5XoSNagKNc03AVqabP13B9pslwdVMtP97+6xg==",
   "success": true,
   "projectFilePath": "C:\\Users\\danie\\source\\repos\\PressStart2\\PressStart2.Api\\PressStart2.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\danie\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
-    "C:\\Users\\danie\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
+    "C:\\Users\\danie\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.0.0\\mediatr.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

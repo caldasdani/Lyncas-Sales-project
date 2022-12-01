@@ -5,6 +5,9 @@ using PressStart2.Domain.Commands;
 using PressStart2.Domain.Commands.ListarCliente;
 using PressStart2.Domain.Commands.AdicionarCliente;
 using PressStart2.Domain.Commands.ObterCliente;
+using PressStart2.Domain.Commands.RemoverCliente;
+using Azure.Core;
+using PressStart2.Domain.Commands.AtualizarCliente;
 
 namespace PressStart2.Api.Controllers
 {
@@ -19,7 +22,7 @@ namespace PressStart2.Api.Controllers
             _mediator = mediator;
         }
 
-        [HttpGet("Listar")]
+        [HttpGet("listar")]
 
         public async Task<IActionResult> Listar()
         {
@@ -27,14 +30,14 @@ namespace PressStart2.Api.Controllers
                 return Ok(listaClientes);
         }
 
-        [HttpGet("Obter/{id}")]
+        [HttpGet("obter/{id}")]
         public async Task<IActionResult> Obter(Guid id)
         {
             var cliente = await _mediator.Send(new ObterClienteRequest(id));
             return Ok(cliente);
         }
 
-        [HttpPost("Adicionar}")]
+        [HttpPost("adicionar")]
         public async Task<IActionResult> Adicionar(AdicionarClienteRequest request)
         {
             var response = await _mediator.Send(request);
@@ -43,6 +46,34 @@ namespace PressStart2.Api.Controllers
 
             return BadRequest(response);
         }
+
+        [HttpPut("atualizar")]
+        public async Task<IActionResult> Atualizar(AtualizarClienteRequest request)
+        {
+            var response = await _mediator.Send(request);
+            if (response.Sucesso)
+            {
+                return Ok(response);
+            }
+
+            return BadRequest(response);
+        }
+
+
+
+        [HttpDelete("remover")]
+        public async Task<IActionResult> Deletar(RemoverClienteRequest request)
+        {
+            var response = await _mediator.Send(request);
+
+            if (response.Sucesso)
+            {
+                return Ok(response);
+            }
+
+            return BadRequest(response);
+        }
+
 
     }
 }

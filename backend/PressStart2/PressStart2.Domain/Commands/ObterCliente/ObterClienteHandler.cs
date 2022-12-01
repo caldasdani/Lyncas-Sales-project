@@ -40,6 +40,7 @@ namespace PressStart2.Domain.Commands.ObterCliente
                 cliente.Nome, 
                 cliente.Email,        // criei um objeto contendo os dados do cliente para simplificar
                 cliente.Telefone, 
+                cliente.Cpf,
                 cliente.FlagAtivo);
 
             return Task.FromResult(

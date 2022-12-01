@@ -8,10 +8,8 @@
 
   <ItemGroup>
     <Folder Include="Commands\AtualizarVenda\" />
-    <Folder Include="Commands\ListarVenda\" />
     <Folder Include="Commands\RemoverVenda\" />
     <Folder Include="Commands\ObterVenda\" />
-    <Folder Include="Commands\AdicionarVenda\" />
   </ItemGroup>
 
   <ItemGroup>

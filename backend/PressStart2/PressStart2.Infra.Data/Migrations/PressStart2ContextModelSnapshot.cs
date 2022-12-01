@@ -74,13 +74,14 @@ namespace PressStart2.Infra.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<decimal>("ValorTotal")
+                        .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("ClienteId");
 
-                    b.ToTable("VendaDbSet");
+                    b.ToTable("Venda", (string)null);
                 });
 
             modelBuilder.Entity("VendaItem", b =>

@@ -23,8 +23,8 @@ namespace PressStart2.Domain.Commands.ListarCliente
                 cliente.Id,
                 cliente.Nome,
                 cliente.Email,
-                cliente.Cpf,
                 cliente.Telefone,
+                cliente.Cpf,
                 cliente.FlagAtivo));
 
             return Task.FromResult(new CommandResponse(ListaClientesResponse, this));
