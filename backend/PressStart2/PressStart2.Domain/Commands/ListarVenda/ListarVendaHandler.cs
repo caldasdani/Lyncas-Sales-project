@@ -1,12 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MediatR;
+using PressStart2.Domain.Commands.ListarCliente;
+using PressStart2.Domain.DTOs;
+using PressStart2.Domain.Interfaces.Repositories;
+using prmToolkit.NotificationPattern;
+
 
 namespace PressStart2.Domain.Commands.ListarVenda
 {
-    internal class ListarVendaHandler
+    public class ListarVendaHandler : Notifiable, IRequestHandler<ListarVendaRequest, CommandResponse>
     {
-    }
+        private readonly IRepositoryVenda _repositoryVenda;
+        // propriedade somente leitura de um repositorio de cliente
+
+        public ListarVendaHandler(IRepositoryVenda repositoryVenda)
+        {
+            _repositoryVenda = repositoryVenda;
+        }
+
+        public Task<CommandResponse> Handle(ListarVendaRequest request, CancellationToken cancellationToken)
+        {
+            var ListaVendas = _repositoryVenda.Listar();
+
+            var ListaVendasResponse = ListaVendas.Select(venda => new ListarVendaResponse(
+                venda.ClienteId,
+                venda.QuantidadeItens,
+                venda.DataVenda,
+                venda.DataFaturamento,
+                venda.ValorTotal));
+
+            return Task.FromResult(new CommandResponse(ListaVendasResponse, this));
+        }
+    }   
 }
+
