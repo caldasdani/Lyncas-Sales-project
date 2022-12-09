@@ -22,6 +22,7 @@ namespace PressStart2.Domain.Commands.ListarVenda
             var ListaVendas = _repositoryVenda.Listar();
 
             var ListaVendasResponse = ListaVendas.Select(venda => new ListarVendaResponse(
+                venda.Id,
                 venda.ClienteId,
                 venda.QuantidadeItens,
                 venda.DataVenda,

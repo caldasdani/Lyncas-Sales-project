@@ -7,12 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\AtualizarVenda\" />
-    <Folder Include="Commands\RemoverVenda\" />
-    <Folder Include="Commands\ObterVenda\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
     <PackageReference Include="prmToolkit.NotificationPattern" Version="1.1.5" />
   </ItemGroup>

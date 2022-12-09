@@ -21,6 +21,16 @@ namespace PressStart2.Api.Controllers
         {
             _mediator = mediator;
         }
+        [HttpPost("adicionar")]
+        public async Task<IActionResult> Adicionar(AdicionarClienteRequest request)
+        {
+            var response = await _mediator.Send(request);
+            if (response.Sucesso)
+                return Created("Cliente Adicionado", response);
+
+            return BadRequest(response);
+        }
+
 
         [HttpGet("listar")]
 
@@ -35,16 +45,6 @@ namespace PressStart2.Api.Controllers
         {
             var cliente = await _mediator.Send(new ObterClienteRequest(id));
             return Ok(cliente);
-        }
-
-        [HttpPost("adicionar")]
-        public async Task<IActionResult> Adicionar(AdicionarClienteRequest request)
-        {
-            var response = await _mediator.Send(request);
-            if (response.Sucesso)
-                return Created("Cliente Adicionado", response);
-
-            return BadRequest(response);
         }
 
         [HttpPut("atualizar")]

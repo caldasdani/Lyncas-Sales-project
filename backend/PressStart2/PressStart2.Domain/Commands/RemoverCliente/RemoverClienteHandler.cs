@@ -7,7 +7,7 @@ using prmToolkit.NotificationPattern;
 
 namespace PressStart2.Domain.Commands.RemoverCliente
 {
-    public class RemoverClienteHandler : Notifiable, IRequestHandler<AtualizarClienteRequest, CommandResponse>
+    public class RemoverClienteHandler : Notifiable, IRequestHandler<RemoverClienteRequest, CommandResponse>
     {
         private readonly IRepositoryCliente _repositoryCliente;
 
@@ -16,7 +16,7 @@ namespace PressStart2.Domain.Commands.RemoverCliente
             _repositoryCliente = repositoryCliente;
         }
 
-        public Task<CommandResponse> Handle(AtualizarClienteRequest request, CancellationToken cancellationToken)
+        public Task<CommandResponse> Handle(RemoverClienteRequest request, CancellationToken cancellationToken)
         {
             if (request == null)
             {
