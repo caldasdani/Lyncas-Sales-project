@@ -1,4 +1,5 @@
-﻿using PressStart2.Domain.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using PressStart2.Domain.Entities;
 using PressStart2.Domain.Interfaces.Repositories;
 using PressStart2.Infra.Data.Context;
 using System;
@@ -14,6 +15,11 @@ namespace PressStart2.Infra.Data.Repositories
         public RepositoryVenda(PressStart2Context context) : base(context)
         {
 
+        }
+
+        public Venda ObterComDependencia(Guid id)
+        {
+            return _context.VendaDbSet.Include(p => p.Itens).FirstOrDefault(p => p.Id == id);
         }
     }
 }

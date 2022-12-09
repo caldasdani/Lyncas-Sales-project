@@ -22,7 +22,7 @@ namespace PressStart2.Domain.Commands.ObterVenda
 
         public Task<CommandResponse> Handle(ObterVendaRequest request, CancellationToken cancellationToken)
         {
-            var venda = _repositoryVenda.Obter(request.Id);
+            var venda = _repositoryVenda.ObterComDependencia(request.Id);
 
             if (venda == null)
             {
