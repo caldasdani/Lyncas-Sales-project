@@ -6,6 +6,7 @@ namespace PressStart2.Domain.Commands.ObterVenda
     {
         public Guid Id { get; set; }
         public Guid ClienteId { get; set; }
+        public string ClienteNome { get; set; }
         public DateTime DataFaturamento { get; set; }
         public IEnumerable<VendaItemObterDto> Itens { get; set; }
 

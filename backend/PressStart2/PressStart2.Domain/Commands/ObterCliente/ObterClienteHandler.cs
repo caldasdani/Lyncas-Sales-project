@@ -2,13 +2,7 @@
 using PressStart2.Domain.Interfaces.Repositories;
 using prmToolkit.NotificationPattern;
 using PressStart2.Domain.DTOs;
-using PressStart2.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using PressStart2.Domain.Entities;
+
 
 namespace PressStart2.Domain.Commands.ObterCliente
 {

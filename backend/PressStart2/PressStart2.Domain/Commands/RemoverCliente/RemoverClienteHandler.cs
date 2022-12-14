@@ -10,20 +10,17 @@ namespace PressStart2.Domain.Commands.RemoverCliente
     public class RemoverClienteHandler : Notifiable, IRequestHandler<RemoverClienteRequest, CommandResponse>
     {
         private readonly IRepositoryCliente _repositoryCliente;
+        private readonly IRepositoryVenda _repositoryVenda;
 
-        public RemoverClienteHandler(IRepositoryCliente repositoryCliente) 
+        public RemoverClienteHandler(IRepositoryCliente repositoryCliente, IRepositoryVenda repositoryVenda) 
         {
             _repositoryCliente = repositoryCliente;
+            _repositoryVenda = repositoryVenda;
         }
 
         public Task<CommandResponse> Handle(RemoverClienteRequest request, CancellationToken cancellationToken)
         {
-            if (request == null)
-            {
-                AddNotification("RemoverClienteHandler", "Request invalido");
-                return Task.FromResult(new CommandResponse(this));
-            }
-
+          
             var cliente = _repositoryCliente.Obter(request.Id);
 
             if (cliente is null)
@@ -32,7 +29,17 @@ namespace PressStart2.Domain.Commands.RemoverCliente
                 return Task.FromResult(new CommandResponse(this));
             }
 
-            _repositoryCliente.Remover(cliente);
+            if (_repositoryVenda.ClientePossuiVendas(cliente.Id))
+            {
+                cliente.Inativar();
+                _repositoryCliente.Atualizar(cliente);
+            }
+            else
+            {
+                _repositoryCliente.Remover(cliente);
+            }
+
+            
             _repositoryCliente.Commit();
 
             return Task.FromResult(new CommandResponse(

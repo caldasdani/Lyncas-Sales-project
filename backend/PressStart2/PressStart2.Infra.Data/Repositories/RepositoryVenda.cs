@@ -19,7 +19,21 @@ namespace PressStart2.Infra.Data.Repositories
 
         public Venda ObterComDependencia(Guid id)
         {
-            return _context.VendaDbSet.Include(p => p.Itens).FirstOrDefault(p => p.Id == id);
+            return _context.VendaDbSet
+                .Include(p => p.Cliente)
+                .Include(p => p.Itens)
+                .FirstOrDefault(p => p.Id == id);
+        }
+
+        public bool ClientePossuiVendas(Guid clienteId)
+        {
+            return _context.VendaDbSet.Any(p => p.ClienteId == clienteId);
+        }
+
+        public IEnumerable<Venda> ListarComDependencia()
+        {
+            return _context.VendaDbSet .Include(p => p.Cliente)
+                                       .AsEnumerable();
         }
     }
 }

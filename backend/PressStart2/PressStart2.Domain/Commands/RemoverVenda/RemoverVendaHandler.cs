@@ -22,13 +22,15 @@ namespace PressStart2.Domain.Commands.RemoverVenda
 
         public Task<CommandResponse> Handle(RemoverVendaRequest request, CancellationToken cancellationToken)
         {
-            var venda = _repositoryVenda.Obter(request.Id);
+            var venda = _repositoryVenda.ObterComDependencia(request.Id);
 
             if (venda == null)
             {
                 AddNotification("RemoverVendaHandler", "Venda não localizada");
                 return Task.FromResult(new CommandResponse(this));
             }
+
+            venda.Itens.ToList().ForEach(vendaItem => venda.RemoverItem(vendaItem));
 
             _repositoryVenda.Remover(venda);
             _repositoryVenda.Commit();

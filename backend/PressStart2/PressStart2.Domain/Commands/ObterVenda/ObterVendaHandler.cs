@@ -34,6 +34,7 @@ namespace PressStart2.Domain.Commands.ObterVenda
             {
                 obterTudo.Id = venda.Id;
                 obterTudo.ClienteId = venda.ClienteId;
+                obterTudo.ClienteNome = venda.Cliente.Nome;
                 obterTudo.DataFaturamento = venda.DataFaturamento;
             }
 

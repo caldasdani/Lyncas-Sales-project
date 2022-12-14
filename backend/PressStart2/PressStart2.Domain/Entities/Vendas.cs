@@ -17,6 +17,8 @@ namespace PressStart2.Domain.Entities
         public virtual IEnumerable <VendaItem> Itens => _itens;
               //funçao de listagem mas sem tantas funcionalidades quanto a lista
 
+        
+        //propriedade de navegabilidade '
         public virtual Cliente Cliente { get; private set; }
 
         protected Venda() { }

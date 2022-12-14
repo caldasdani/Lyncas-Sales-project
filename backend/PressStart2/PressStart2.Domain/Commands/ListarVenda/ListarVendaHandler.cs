@@ -19,7 +19,7 @@ namespace PressStart2.Domain.Commands.ListarVenda
 
         public Task<CommandResponse> Handle(ListarVendaRequest request, CancellationToken cancellationToken)
         {
-            var ListaVendas = _repositoryVenda.Listar();
+            var ListaVendas = _repositoryVenda.ListarComDependencia();
 
             var ListaVendasResponse = ListaVendas.Select(venda => new ListarVendaResponse(
                 venda.Id,
