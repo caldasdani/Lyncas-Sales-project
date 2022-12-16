@@ -5,6 +5,7 @@ using System.Security.Cryptography.X509Certificates;
 
 public class VendaItem : EntidadeBase // a classe vendaitem está herdando oq contem na EntidadeBase.
 {
+	public Guid VendaId { get; private set; }
 	public string? DescricaoItem { get; private set; }
 	public decimal ValorUnitario { get; private set; }
 	public int Quantidade { get; private set; }
