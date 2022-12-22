@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PressStart2.Domain.Entities;
 
 namespace PressStart2.Domain.Interfaces.Repositories
 {
-    internal interface Interface1
+    public interface IRepositoryUsuario : IRepositoryBase<Usuario>
     {
+
     }
 }

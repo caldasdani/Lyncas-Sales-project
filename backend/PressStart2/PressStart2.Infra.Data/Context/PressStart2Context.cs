@@ -11,6 +11,7 @@ namespace PressStart2.Infra.Data.Context
         public DbSet<Cliente> ClienteDbSet { get; set; }
         public DbSet<Venda> VendaDbSet { get; set;}
         public DbSet<VendaItem> VendaItemDbSet { get; set; }
+        public DbSet<Usuario> UsuarioDbSet { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
