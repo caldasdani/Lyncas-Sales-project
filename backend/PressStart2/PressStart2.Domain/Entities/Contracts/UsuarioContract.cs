@@ -10,6 +10,7 @@ namespace PressStart2.Domain.Entities.Contracts
             new AddNotifications<Usuario>(usuario)
                 .IfNullOrInvalidLength(p => p.Login, 1, 100)
                 .IfNullOrInvalidLength(p => p.Senha, 1, 100)
+                .IfNullOrInvalidLength(p => p.Nome, 1, 100)
                 .IfNotEmail(p => p.Login);
         }
     }

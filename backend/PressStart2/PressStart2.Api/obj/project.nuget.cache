@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6ndbxD6I5M4IS+oEnDb9f3GYRa/pVlkQfbmmPmUG49b4mltxf5XoSNagKNc03AVqabP13B9pslwdVMtP97+6xg==",
+  "dgSpecHash": "d9s3QyLlOcrEmib1bv9En4F17J/fD8fuZHuCUA94mSE2R0RYiiQqLbIWC4nYR0neHS73iKSheZRRjTU0Lt6JFw==",
   "success": true,
   "projectFilePath": "C:\\Users\\danie\\source\\repos\\PressStart2\\PressStart2.Api\\PressStart2.Api.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Users\\danie\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.0.0\\mediatr.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "C:\\Users\\danie\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.12\\microsoft.aspnetcore.authentication.jwtbearer.6.0.12.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",

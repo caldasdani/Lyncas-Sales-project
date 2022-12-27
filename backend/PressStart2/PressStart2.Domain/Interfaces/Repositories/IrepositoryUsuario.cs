@@ -4,6 +4,6 @@ namespace PressStart2.Domain.Interfaces.Repositories
 {
     public interface IRepositoryUsuario : IRepositoryBase<Usuario>
     {
-
+        Usuario Autenticar(string login, string senha);
     }
 }

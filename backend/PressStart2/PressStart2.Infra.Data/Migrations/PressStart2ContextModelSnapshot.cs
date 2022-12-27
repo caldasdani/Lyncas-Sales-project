@@ -55,6 +55,32 @@ namespace PressStart2.Infra.Data.Migrations
                     b.ToTable("Cliente", (string)null);
                 });
 
+            modelBuilder.Entity("PressStart2.Domain.Entities.Usuario", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Login")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Senha")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Usuario", (string)null);
+                });
+
             modelBuilder.Entity("PressStart2.Domain.Entities.Venda", b =>
                 {
                     b.Property<Guid>("Id")
@@ -102,7 +128,7 @@ namespace PressStart2.Infra.Data.Migrations
                     b.Property<decimal>("ValorUnitario")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<Guid?>("VendaId")
+                    b.Property<Guid>("VendaId")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
@@ -127,7 +153,9 @@ namespace PressStart2.Infra.Data.Migrations
                 {
                     b.HasOne("PressStart2.Domain.Entities.Venda", null)
                         .WithMany("Itens")
-                        .HasForeignKey("VendaId");
+                        .HasForeignKey("VendaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("PressStart2.Domain.Entities.Venda", b =>

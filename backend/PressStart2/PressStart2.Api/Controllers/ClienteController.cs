@@ -8,11 +8,13 @@ using PressStart2.Domain.Commands.ObterCliente;
 using PressStart2.Domain.Commands.RemoverCliente;
 using Azure.Core;
 using PressStart2.Domain.Commands.AtualizarCliente;
+using Microsoft.AspNetCore.Authorization;
 
 namespace PressStart2.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ClienteController : ControllerBase
     {
         private readonly IMediator _mediator;

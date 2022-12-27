@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PressStart2.Domain.Commands.AdicionarCliente;
@@ -15,6 +16,7 @@ namespace PressStart2.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class VendaController : ControllerBase
     {
         private readonly IMediator _mediator;
