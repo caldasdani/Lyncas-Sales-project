@@ -19,10 +19,15 @@
         </div>
         <div class="branco">
             <span id="entrar">Entrar</span>
-            <input type="text" placeholder="E-mail">
-            <input type="text" placeholder="Senha">
-            <a href="./dashboard.html"><button id="login">Entrar</button></a>
+            <input type="text" id="email" placeholder="E-mail">
+            <input type="text" id="senha" placeholder="Senha">
+            <a><button id="login" onclick="autenticar()">Entrar</button></a>
         </div>
     </main>
 </body>
+
+<script type="module">
+    import {autenticar} from "./js/services/usuario.service.js";
+    window.autenticar = autenticar;
+</script>
 </html>
