@@ -1,6 +1,4 @@
 import { ApiService } from "../api/api.service.js";
-import inputs from "../inputs.js"
-
 
 //----------------------------------------------------------------------------------------
 
