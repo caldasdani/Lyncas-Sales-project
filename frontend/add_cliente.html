@@ -70,7 +70,11 @@
             </form>
         </main>
     </section>
-    <script src="./js/inputs.js"></script>
+    <script type="module" src="./js/inputs.js"></script>
+    <script type="module">
+        import {addCliente} from "./js/services/addCliente.service.js";
+        window.addCliente = addCliente;
+    </script>
 </body>
 </html>  
 

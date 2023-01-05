@@ -59,42 +59,14 @@
                         </tr>
                     </thead>
                     <div class="div_body">
-                        <tbody class="tbody">
-                            <tr>
-                                <td>Daniel Caldas</td>
-                                <td>daniel@gmail</td>
-                                <td>2190909090</td>
-                                <td>000.111.222-33</td>
-                                <td><button class="del_btn" onclick="alertDeleteCliente()">Deletar</button><button class="edit_btn" onclick="alertEdit()">Editar</button></td>
-                            </tr>
-                            <tr>
-                                <td>Cristiano Ronaldo</td>
-                                <td>cr7@hotmail.com</td>
-                                <td>219090909000000</td>
-                                <td>000.111.222-33</td>
-                                <td><button class="del_btn" onclick="alertDeleteCliente()">Deletar</button><button class="edit_btn" onclick="alertEdit()">Editar</button></td>
-                            </tr>
-                            <tr>
-                                <td>Fausto Silva</td>
-                                <td>faustao@yahoo</td>
-                                <td>2190909090</td>
-                                <td>000.111.222-33</td>
-                                <td><button class="del_btn" onclick="alertDeleteCliente()">Deletar</button><button class="edit_btn" onclick="alertEdit()">Editar</button></td>
-                            </tr>
-                            <tr>
-                                <td>Joao Ninguem</td>
-                                <td>ninguem@gmail</td>
-                                <td>2190909090</td>
-                                <td>000.555.888-33</td>
-                                <td><button class="del_btn" onclick="alertDeleteCliente()">Deletar</button><button class="edit_btn" onclick="alertEdit()">Editar</button></td>
-                            </tr>
-                            <tr>
+                        <tbody id="table_client" class="tbody">
+                            <!-- <tr>
                                 <td>Genara Sousa</td>
                                 <td>genara7sousa@gmail.com</td>
                                 <td>2190909090</td>
                                 <td>000.111.222-33</td>
                                 <td><button class="del_btn" onclick="alertDeleteCliente()">Deletar</button><button class="edit_btn" onclick="alertEdit()">Editar</button></td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </div>
                 </table>
@@ -194,5 +166,9 @@
     </section>
     <script src="./js/modais.js"></script>
     <script src="./js/alerts.js"></script>
+    <script type="module">
+        import {listarCliente} from "./js/services/listarCliente.service.js";
+        window.listarCliente = listarCliente;
+    </script>
 </body>
 </html>

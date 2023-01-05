@@ -44,7 +44,7 @@ input2.addEventListener('keypress', () => {
 
     console.log("cpf passou? " + cpfPassou);
     return cpfPassou  
-  }
+  };
 
 
   function validarTel() {
@@ -55,7 +55,7 @@ input2.addEventListener('keypress', () => {
     
     console.log("telefone passou? " + telefonePassou);
     return telefonePassou     
-  }
+  };
   
 
   function validarNome() {
@@ -66,7 +66,7 @@ input2.addEventListener('keypress', () => {
    
     console.log("nome passou? " + nomePassou);
     return nomePassou
-  }
+  };
   
 
   function validarEmail() {
@@ -77,7 +77,7 @@ input2.addEventListener('keypress', () => {
 
     console.log("email passou? " + emailPassou);
     return emailPassou; 
-  }
+  };
 
   
   function validarTudo(event) {
@@ -94,13 +94,15 @@ input2.addEventListener('keypress', () => {
         telefonePassouNaRegra && 
         cpfPassouNaRegra
 
-        if(inputsPassaramNasRegras){
-            alert("Cliente Cadastrado")
-            window.location.href = "dash_cliente.html"
-        }        
+        return inputsPassaramNasRegras
+
+        // if(inputsPassaramNasRegras){
+        //     alert("Cliente Cadastrado")
+        //     window.location.href = "dash_cliente.html"
+        // }        
     }
 
-form.addEventListener('submit', validarTudo)
+
 
 //-----------------------------------------------------
 // FUNCIONALIDADE DO BOTÃO MAIS ITENS
@@ -118,3 +120,7 @@ form.addEventListener('submit', validarTudo)
         
     
     // moreItensButton.addEventListener('click', useClone);
+
+    export default {
+      validarCPF, validarEmail, validarNome, validarTel
+    }

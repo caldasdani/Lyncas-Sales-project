@@ -6,13 +6,13 @@ export const ApiService = {        // criei esse objeto com metodos pra usar em 
         return fetch(`${API_URL}/${resource}`, {  //retorna a url da api + o parametro ex: /Cliente/listar
             headers: {
                 'Content-Type': 'application/json',
-                Authorization: `Bearer $`
+                Authorization: `Bearer ${localStorage.getItem("token")}`
             }
         })  .then((data)=> {
                 return data.json();          // se tiver ok retorna os dados
             })
             .catch((error) => {              // senão retorna o erro
-                console.error(error);
+                console.log(error);
             })
     },
 
@@ -29,7 +29,7 @@ export const ApiService = {        // criei esse objeto com metodos pra usar em 
                 return data.json();
             })
             .catch((error) => {
-                console.error(error);
+                console.log(error);
             })
     },
 
@@ -46,7 +46,7 @@ export const ApiService = {        // criei esse objeto com metodos pra usar em 
                 return data.json();
             })
             .catch((error) => {
-                console.error(error);
+                console.log(error);
             })
     },
 
