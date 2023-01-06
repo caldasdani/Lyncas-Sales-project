@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using PressStart2.Api;
 using System.Text;
 
@@ -27,7 +28,38 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
+builder.Services.AddSwaggerGen(config =>
+{
+
+    //configuração de vaildação e autorização no swagger, botao no topo da pagina para inserir o token
+    config.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme   
+    {
+        Name = "Authorization",
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.Http,
+        Scheme = "Bearer"
+    });
+
+    //autorização para uso dos commands no swagger (icone de cadeado nos endpoints)
+    config.AddSecurityRequirement(new OpenApiSecurityRequirement 
+    {
+        { 
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                },
+                Scheme = "outh2",
+                Name = "Bearer",
+                In = ParameterLocation.Header
+            },
+            new List<String>()
+        }   
+    });
+});
 
 builder.Services.ConfigureDbContext(builder.Configuration.GetConnectionString("PS2Connection"));
 builder.Services.ConfigureRepository();
@@ -41,6 +73,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors(x => x.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+
+app.UseAuthentication();
 
 app.UseHttpsRedirection();
 

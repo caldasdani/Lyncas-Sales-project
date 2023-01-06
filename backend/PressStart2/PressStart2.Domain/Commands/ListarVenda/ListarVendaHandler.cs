@@ -23,7 +23,8 @@ namespace PressStart2.Domain.Commands.ListarVenda
 
             var ListaVendasResponse = ListaVendas.Select(venda => new ListarVendaResponse(
                 venda.Id,
-                venda.ClienteId,
+                venda.Cliente.Id,
+                venda.Cliente.Nome,
                 venda.QuantidadeItens,
                 venda.DataVenda,
                 venda.DataFaturamento,

@@ -28,10 +28,10 @@ namespace PressStart2.Api.Controllers
         }
 
         [AllowAnonymous]
-        [HttpGet("autenticar")]
-        public async Task<IActionResult> Autenticar([FromQuery] string login, [FromQuery] string senha)
+        [HttpPost("autenticar")]
+        public async Task<IActionResult> Autenticar(LoginUsuarioRequest request)
         {
-            var commandResponse = await _mediator.Send(new LoginUsuarioRequest(login, senha));
+            var commandResponse = await _mediator.Send(request);
 
             if (!commandResponse.Sucesso)
                 return BadRequest(commandResponse);
@@ -54,12 +54,16 @@ namespace PressStart2.Api.Controllers
                 expires: DateTime.Now.AddDays(1),
                 signingCredentials: creds);
 
-            return Ok(new
+            var dadosAutenticados = new
             {
-                NomeUsuario = usuario.Nome,
-                Token = new JwtSecurityTokenHandler().WriteToken(token)
-            });
-
+               Sucesso = true,
+               Dados = new
+               {
+                    NomeUsuario = usuario.Nome,
+                    Token = new JwtSecurityTokenHandler().WriteToken(token)
+               }
+            };
+            return Ok(dadosAutenticados);
         }
 
         [HttpPost("adicionar")]
