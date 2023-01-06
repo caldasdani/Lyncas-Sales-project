@@ -45,7 +45,10 @@
             <div class="search_list">
                 <p id="title">Lista de vendas</p>
                 <a href="./add_venda.html"><button id="add_button2">+</button></a>
-                <input type="text" id="input" placeholder="Buscar venda...">
+                <div class="input_container">
+                    <input type="text" id="input" placeholder="Buscar venda...">
+                    <button onclick="obterVenda()"><img src="./img/lupinha.svg"></button>
+                </div>  
             </div>
             <div class="table">
                 <table>
@@ -60,47 +63,15 @@
                         </tr>
                     </thead>
                     <div class="div_body">
-                    <tbody class="tbody">
-                        <tr>
+                    <tbody id="table_sale" class="tbody">
+                        <!-- <tr>
                             <td>Daniel Caldas</td>
                             <td>1</td>
                             <td>17/10/2021</td>
                             <td>18/10/2021</td>
                             <td>R$900</td>
                             <td><button class="del_btn" onclick="alertDeleteVenda()">Deletar</button><button class="edit_btn" onclick="alertEdit()">Editar</button></td>
-                        </tr>
-                        <tr>
-                            <td>Cristiano Ronaldo</td>
-                            <td>4</td>
-                            <td>17/10/2021</td>
-                            <td>18/10/2021</td>
-                            <td>R$900</td>
-                            <td><button class="del_btn" onclick="alertDeleteVenda()">Deletar</button><button class="edit_btn" onclick="alertEdit()">Editar</button></td>
-                        </tr>
-                        <tr>
-                            <td>Fausto Silva</td>
-                            <td>3</td>
-                            <td>17/10/2021</td>
-                            <td>18/10/2021</td>
-                            <td>R$900</td>
-                            <td><button class="del_btn" onclick="alertDeleteVenda()">Deletar</button><button class="edit_btn" onclick="alertEdit()">Editar</button></td>
-                        </tr>
-                        <tr>
-                            <td>Joao Ninguem</td>
-                            <td>9</td>
-                            <td>17/10/2021</td>
-                            <td>18/10/2021</td>
-                            <td>R$900</td>
-                            <td><button class="del_btn" onclick="alertDeleteVenda()">Deletar</button><button class="edit_btn" onclick="alertEdit()">Editar</button></td>
-                        </tr>
-                        <tr>
-                            <td>Genara Sousa</td>
-                            <td>5</td>
-                            <td>17/10/2021</td>
-                            <td>18/10/2021</td>
-                            <td>R$900</td>
-                            <td><button class="del_btn" onclick="alertDeleteVenda()">Deletar</button><button class="edit_btn" onclick="alertEdit()">Editar</button></td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                 </div>
                 </table>
@@ -159,5 +130,11 @@
         </main>
     </section>
     <script src="./js/alerts.js"></script>
+    <script type="module">
+        import {listarVenda} from "./js/services/listar_venda.service.js";
+        window.listarVenda = listarVenda;
+        import {obterVenda} from "./js/services/obter_venda.service.js";
+        window.obterVenda = obterVenda;
+    </script>
 </body>
 </html>

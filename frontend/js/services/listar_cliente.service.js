@@ -10,14 +10,14 @@ export async function listarCliente(){
     const tbody = document.getElementById("table_client");
 
     listaClientes.dados.forEach(cliente => {
-        const tr = criarLinhaTabela(cliente)
+        const tr = criarLinhaTabelaCliente(cliente)
         tbody.appendChild(tr);
     });
 }
 listarCliente();
 
 
-function criarLinhaTabela(cliente){
+export function criarLinhaTabelaCliente(cliente){
     const tr = document.createElement("tr")
 
     const tdNome = document.createElement("td")
@@ -49,7 +49,6 @@ function criarLinhaTabela(cliente){
     tdBotao.appendChild(del_btn);
     tdBotao.appendChild(edit_btn);
     tr.appendChild(tdBotao);
-    console.log(tr)
     return tr;
 }
 

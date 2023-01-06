@@ -121,6 +121,17 @@ section {
     font-size: 25px;
     color: #26324B;
 }
+.input_container{
+    position: relative;
+}
+.input_container button{
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    top: calc(50% - 15px);
+}
 #input{
     border: 1px solid #E5EBF1;
     border-radius: 5px;
@@ -540,5 +551,8 @@ section {
         line-height: 29px;
         color: #FFFFFF;
         cursor: pointer;
+    }
+    .input_container{
+        display: none;
     }
 }

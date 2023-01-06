@@ -45,7 +45,10 @@
             <div class="search_list">
                 <p id="title">Lista de clientes</p>
                 <a href="./add_cliente.html"><button id="add_button2">+</button></a>
-                <input type="text" id="input" placeholder="Buscar cliente...">
+                <div class="input_container">
+                    <input type="text" id="input" placeholder="Buscar cliente...">
+                    <button onclick="obterCliente()"><img src="./img/lupinha.svg"></button>
+                </div>               
             </div>
             <div class="table">
                 <table>
@@ -168,7 +171,9 @@
     <script src="./js/alerts.js"></script>
     <script type="module">
         import {listarCliente} from "./js/services/listar_cliente.service.js";
-        window.listarCliente = listarCliente;
+        window.listarCliente = listarCliente;   
+        import {obterCliente} from "./js/services/obter_cliente.service.js";
+        window.obterCliente = obterCliente;
     </script>
 </body>
 </html>
