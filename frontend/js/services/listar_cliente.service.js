@@ -1,4 +1,6 @@
 import { ApiService } from "../api/api.service.js";
+import { removerCliente } from "./remover_cliente.service.js";
+
 
 //----------------------------------------------------------------------------------------
 
@@ -33,14 +35,17 @@ export function criarLinhaTabelaCliente(cliente){
     tdCpf.innerHTML = cliente.cpf;
 
     const tdBotao = document.createElement("td");
-    const del_btn = document.createElement("button");
+
+    const del_btn = document.createElement("button");  
+    del_btn.setAttribute("data-deletar",`${cliente.id}`)
     del_btn.innerHTML = "Deletar"
     del_btn.classList.add("del_btn")
 
     const edit_btn = document.createElement("button");
+    edit_btn.setAttribute("data-editar",`${cliente.id}`)
     edit_btn.innerHTML = "Editar"
     edit_btn.classList.add("edit_btn")
-
+    
     tr.appendChild(tdNome);
     tr.appendChild(tdEmail);
     tr.appendChild(tdTelefone);
@@ -49,6 +54,13 @@ export function criarLinhaTabelaCliente(cliente){
     tdBotao.appendChild(del_btn);
     tdBotao.appendChild(edit_btn);
     tr.appendChild(tdBotao);
+
+    del_btn.addEventListener('click', removerCliente)
+
+    edit_btn.onclick = function(){
+        localStorage.setItem("clienteId", cliente.id), 
+        window.location.href = "http://127.0.0.1:5500/edit_cliente.html"
+    }
     return tr;
 }
 

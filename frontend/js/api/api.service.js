@@ -57,7 +57,7 @@ export const ApiService = {        // criei esse objeto com metodos pra usar em 
                 'Content-Type': 'application/json',
                 Authorization: `Bearer ${localStorage.getItem("token")}`         
             },
-            body: `${info}`
+            body: JSON.stringify(info)
         }) 
             .then((data)=> {
                 return data.json();

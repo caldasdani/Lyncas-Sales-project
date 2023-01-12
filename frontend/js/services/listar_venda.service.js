@@ -1,4 +1,5 @@
 import { ApiService } from "../api/api.service.js";
+import { removerVenda } from "./remover_venda.service.js";
 
 //----------------------------------------------------------------------------------------
 
@@ -52,13 +53,20 @@ export function criarLinhaTabelaVenda(venda){
     const tdBotao = document.createElement("td");
 
     const del_btn = document.createElement("button");
+    del_btn.setAttribute("data-deletar",`${venda.id}`)
     del_btn.innerHTML = "Deletar"
     del_btn.classList.add("del_btn")
 
     const edit_btn = document.createElement("button");
+    edit_btn.setAttribute("data-editar",`${venda.id}`)
     edit_btn.innerHTML = "Editar"
     edit_btn.classList.add("edit_btn")
-
+    edit_btn.onclick = function(){
+        localStorage.setItem("vendaId", venda.id)
+        localStorage.setItem("clienteId", venda.clienteId)
+        window.location.href = "http://127.0.0.1:5500/edit_venda.html"
+    }
+    
     tr.appendChild(tdCliente);
     tr.appendChild(tdQt_itens);
     tr.appendChild(tdData_venda);
@@ -69,5 +77,8 @@ export function criarLinhaTabelaVenda(venda){
     tdBotao.appendChild(edit_btn);
     tr.appendChild(tdBotao);
 
+    del_btn.addEventListener('click', removerVenda);
+
+    //edit_btn.onclick
     return tr;
 }

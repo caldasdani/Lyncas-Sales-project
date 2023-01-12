@@ -20,6 +20,7 @@ export async function addCliente(event){
     let resposta = await ApiService.post("Cliente/adicionar", body);
     if(resposta.sucesso){
         alert(resposta.dados.mensagem);
+        window.location.href = "http://127.0.0.1:5500/dash_cliente.html"
     }
     else{
         alert(resposta.notificacoes[0].message);
@@ -29,4 +30,4 @@ export async function addCliente(event){
 }
 
 const form = document.getElementById("form")
-form.addEventListener('submit', await addCliente)
+form.addEventListener('submit', addCliente)

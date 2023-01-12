@@ -7,7 +7,7 @@ export async function autenticar(){
 
     let retorno = await ApiService.post("Usuario/autenticar", body);
     if(retorno.sucesso){
-        window.location = "./dashboard.html"
+        window.location.href = "http://127.0.0.1:5500/dashboard.html"
     }
     else{
         alert(retorno.notificacoes[0].message);
