@@ -1,12 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using MediatR;
-using PressStart2.Domain.Commands;
 using PressStart2.Domain.Commands.ListarCliente;
 using PressStart2.Domain.Commands.AdicionarCliente;
 using PressStart2.Domain.Commands.ObterCliente;
 using PressStart2.Domain.Commands.RemoverCliente;
-using Azure.Core;
 using PressStart2.Domain.Commands.AtualizarCliente;
 using Microsoft.AspNetCore.Authorization;
 

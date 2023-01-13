@@ -1,15 +1,10 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using PressStart2.Domain.Commands.AdicionarCliente;
 using PressStart2.Domain.Commands.AdicionarVenda;
-using PressStart2.Domain.Commands.AtualizarCliente;
 using PressStart2.Domain.Commands.AtualizarVenda;
-using PressStart2.Domain.Commands.ListarCliente;
 using PressStart2.Domain.Commands.ListarVenda;
 using PressStart2.Domain.Commands.ObterVenda;
-using PressStart2.Domain.Commands.RemoverCliente;
 using PressStart2.Domain.Commands.RemoverVenda;
 
 namespace PressStart2.Api.Controllers

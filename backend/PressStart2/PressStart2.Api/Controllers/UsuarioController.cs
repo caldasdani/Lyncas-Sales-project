@@ -1,10 +1,8 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using PressStart2.Domain.Commands.AdicionarUsuario;
-using PressStart2.Domain.Commands.ListarCliente;
 using PressStart2.Domain.Commands.LoginUsuario;
 using PressStart2.Domain.DTOs;
 using System.IdentityModel.Tokens.Jwt;
