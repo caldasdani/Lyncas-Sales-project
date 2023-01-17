@@ -14,9 +14,16 @@ export async function addVenda(event){
         quantidade: document.getElementById("quant").value,
         valorTotal: document.getElementById("total").value
     }
+    let itensMais = {
+        descricaoItem: document.getElementById("descMore").value,
+        valorUnitario: document.getElementById("unitMore").value,
+        quantidade: document.getElementById("quantMore").value,
+        valorTotal: document.getElementById("totalMore").value
+    }
     let itensArray = [];
     itensArray.push(itens);
-
+    itensArray.push(itensMais);
+    
     let body ={
         clienteId: clienteId, 
         dataFaturamento: dataFaturamento, 
