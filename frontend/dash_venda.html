@@ -46,8 +46,15 @@
                 <p id="title">Lista de vendas</p>
                 <a href="./add_venda.html"><button id="add_button2">+</button></a>
                 <div class="input_container">
+                    <p>Procurar venda por:</p>
+                    <select id="search">
+                        <option value="ClienteNome"selected>Cliente</option>
+                        <option value="ValorTotal">Valor</option>
+                        <option value="DataVenda">Data</option>
+                        <option value="DataFaturamento">Faturamento</option>
+                        </select>
                     <input type="text" id="input" placeholder="Buscar venda...">
-                    <button onclick="obterVenda()"><img src="./img/lupinha.svg"></button>
+                    <button onclick="listarVendaSelect()"><img src="./img/lupinha.svg"></button>
                 </div>  
             </div>
             <div class="table">
@@ -75,6 +82,13 @@
                     </tbody>
                 </div>
                 </table>
+                <div class="pagination">
+                    <!-- <button class="pag" id="first_page">Primeira</button> -->
+                    <button class="pag" id="previous"> ◀ </button>
+                    <p id="pagNumber">Pagina 1</p>
+                    <button class="pag" id="next"> ▶ </button>
+                    <!-- <button class="pag" id="last_page">Ultima</button> -->
+                </div>
             </div>
             <div class="table_responsive">
                 
@@ -133,8 +147,8 @@
     <script type="module">
         import {listarVenda} from "./js/services/listar_venda.service.js";
         window.listarVenda = listarVenda;
-        import {obterVenda} from "./js/services/obter_venda.service.js";
-        window.obterVenda = obterVenda;
+        import {listarVendaSelect} from "./js/services/listar_venda.service.js";
+        window.listarVendaSelect = listarVendaSelect;
     </script>
 </body>
 </html>

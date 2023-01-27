@@ -40,14 +40,32 @@
         </header>
         <main class="main-container">
             <div>
+                
+            </div>
+            <div class="input_container2">
+                <p>Procurar cliente por:</p>
+                    <select id="search2">
+                        <option value="Nome"selected>Nome</option>
+                        <option value="Email">E-mail</option>
+                        <option value="Telefone">Telefone</option>
+                        <option value="cpf">CPF</option>
+                        </select>  
                 <input type="text" id="input2" placeholder="Buscar cliente...">
+                <button onclick="listarClienteSelectResp()"><img src="./img/lupinha.svg"></button>
             </div>
             <div class="search_list">
                 <p id="title">Lista de clientes</p>
                 <a href="./add_cliente.html"><button id="add_button2">+</button></a>
                 <div class="input_container">
+                    <p>Procurar cliente por:</p>
+                    <select id="search">
+                        <option value="Nome"selected>Nome</option>
+                        <option value="Email">E-mail</option>
+                        <option value="Telefone">Telefone</option>
+                        <option value="cpf">CPF</option>
+                        </select>                            
                     <input type="text" id="input" placeholder="Buscar cliente...">
-                    <button onclick="obterCliente()"><img src="./img/lupinha.svg"></button>
+                    <button onclick="listarClienteSelect()"><img src="./img/lupinha.svg"></button>                                     
                 </div>               
             </div>
             <div class="table">
@@ -73,54 +91,29 @@
                         </tbody>
                     </div>
                 </table>
+                <div class="pagination">
+                    <!-- <button class="pag" id="first_page">Primeira</button> -->
+                    <button class="pag" id="previous"> ◀ </button>
+                    <p id="pagNumber">Pagina 1</p>
+                    <button class="pag" id="next"> ▶ </button>
+                    <!-- <button class="pag" id="last_page">Ultima</button> -->
+                </div>
             </div>
-            <div class="table_responsive">     
-                <div class="tbody_responsive">
-                    <div>
-                        <p>Daniel Caldas</p>
-                        <div id="cpf">000.111.222-33</div>
+            <div class="table_responsive">
+                <table>
+                    <div class="tbody_responsive">
+                        <tbody id="table_client_responsive">
+                        </tbody>
                     </div>
-                    <div>           
-                        <button id="open_details"><img src="./img/Profile.png"></button>
-                    </div>
-                </div>
-                <div class="tbody_responsive">
-                    <div>
-                        <p>Cristiano Ronaldo</p>
-                        <div id="cpf">000.111.222-33</div>
-                    </div>
-                    <div>           
-                        <button id="open_details2"><img src="./img/Profile.png"></button>
-                    </div>
-                </div>
-                <div class="tbody_responsive">
-                    <div>
-                        <p>Fausto Silva</p>
-                        <div id="cpf">000.111.222-33</div>
-                    </div>
-                    <div>           
-                        <button id="open_details3"><img src="./img/Profile.png"></button>
-                    </div>
-                </div> 
-                <div class="tbody_responsive">
-                    <div>
-                        <p>Joao Ninguem</p>
-                        <div id="cpf">000.555.888-33</div>
-                    </div>
-                    <div>           
-                        <button id="open_details4"><img src="./img/Profile.png"></button>
-                    </div>
-                </div> 
-                <div class="tbody_responsive">
-                    <div>
-                        <p>Genara Sousa</p>
-                        <div id="cpf">000.111.222-33</div>
-                    </div>
-                    <div>           
-                        <button id="open_details5"><img src="./img/Profile.png"></button>
-                    </div>
-                </div> 
+                </table>
             </div> 
+            <div class="pagination2">
+                <!-- <button class="pag" id="first_page">Primeira</button> -->
+                <button class="pag" id="previous2"> ◀ </button>
+                <p id="pagNumber2">Pagina 1</p>
+                <button class="pag" id="next2"> ▶ </button>
+                <!-- <button class="pag" id="last_page">Ultima</button> -->
+            </div>
             <div id="fade" class="hide"></div>
             <div id="modal" class="hide">
                 <div id="header_modal">
@@ -172,8 +165,10 @@
     <script type="module">
         import {listarCliente} from "./js/services/listar_cliente.service.js";
         window.listarCliente = listarCliente;   
-        import {obterCliente} from "./js/services/obter_cliente.service.js";
-        window.obterCliente = obterCliente;
+        import {listarClienteSelect} from "./js/services/listar_cliente.service.js";
+        window.listarClienteSelect = listarClienteSelect;
+        import {listarClienteSelectResp} from "./js/services/listar_cliente.service.js";
+        window.listarClienteSelectResp = listarClienteSelectResp;
     </script>
 </body>
 </html>

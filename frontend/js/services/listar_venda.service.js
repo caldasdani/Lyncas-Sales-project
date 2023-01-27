@@ -16,6 +16,24 @@ export async function listarVenda(){
 }
 listarVenda();
 
+export async function listarVendaSelect(){
+    let tipo_busca = search.value
+    let valor_busca = input.value
+
+    if (tipo_busca == "DataVenda" || tipo_busca == "DataFaturamento"){
+        valor_busca = valor_busca.replaceAll("/","").replace(/(\d{2})(\d{2})(\d{4})/, "$3-$2-$1")       
+    }
+    let listaVendas = await ApiService.get(`Venda/listar?${tipo_busca}=${valor_busca}`);   
+
+    const tbody = document.getElementById("table_sale");
+    tbody.innerHTML = "";
+
+    listaVendas.dados.forEach(venda => {
+        const tr = criarLinhaTabelaVenda(venda)
+        tbody.appendChild(tr);
+    });
+}
+
 export function criarLinhaTabelaVenda(venda){
     const tr = document.createElement("tr")
 

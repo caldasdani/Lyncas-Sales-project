@@ -3,6 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+html{
+    font-family: 'Jost';
+}
 body{
     display: flex;
     flex-direction: row;
@@ -30,7 +33,6 @@ body{
     display: flex;
     align-items: center;
     padding-left: 13px;
-    font-family: 'Jost';
     border: 1px solid #1C3B85;
     width: 136px;
     height: 36px;
@@ -63,7 +65,6 @@ body{
 #hello{
     cursor: default;
     margin-left: 20px;
-    font-family: 'Jost';
     font-style: normal;
     font-weight: 700;
     font-size: 15px;
@@ -71,7 +72,6 @@ body{
 }
 #logout{
     cursor: pointer;
-    font-family: 'Jost';
     font-style: normal;
     font-weight: 500;
     margin-left: 20px;
@@ -93,7 +93,6 @@ body{
     background: #03C874;
     color: #FFFFFF;
     border-radius: 4px;
-    font-family: 'Jost';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -115,14 +114,15 @@ section {
     padding-bottom: 15px;
 }
 #title{
-    font-family: 'Jost';
     font-style: normal;
     font-weight: 500;
     font-size: 25px;
     color: #26324B;
 }
 .input_container{
+    display: flex;
     position: relative;
+    align-items: center;
 }
 .input_container button{
     position: absolute;
@@ -132,6 +132,24 @@ section {
     cursor: pointer;
     top: calc(50% - 15px);
 }
+.input_container select{
+    border: 1px solid #E5EBF1;
+    border-radius: 5px;
+    background: #FFFFFF;
+    width: 90px;
+    height: 30px;
+    margin-left: 5px;
+    margin-right: 15px;
+    padding-left: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+}
+.input_container p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+}
 #input{
     border: 1px solid #E5EBF1;
     border-radius: 5px;
@@ -139,12 +157,14 @@ section {
     width: 300px;
     height: 30px;
     padding-left: 19px;
-    font-family: 'Jost';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
 }
 #input2{
+    display: none;
+}
+.input_container2{
     display: none;
 }
 .table{
@@ -161,7 +181,6 @@ section {
 }
 .thead{
     margin-top: 10px;
-    font-family: 'Jost';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -174,7 +193,6 @@ section {
 }
 .tbody tr{
     background: #FFFFFF;
-    font-family: 'Jost';
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -226,6 +244,31 @@ section {
 }
 #fade_edit{
     display: none;
+}
+.pagination2{
+    display: none;
+}
+.pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    gap: 10px;
+}
+.pag{
+    cursor: pointer;
+    padding: 3px;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    background: #274A9D;
+}
+#first_page , #last_page{
+    width: 80px;
+    height: 25px;
+}
+#next, #previous{
+    width: 25px;
+    height: 25px;
 }
 
 @media (max-width: 768px){
@@ -319,7 +362,6 @@ section {
         border-radius: 4px;
         background: #03C874;
         color: #FFFFFF;
-        font-family: 'Jost';
         font-style: normal;
         font-weight: 700;
         font-size: 16px;
@@ -331,16 +373,46 @@ section {
     #input{
         display: none;
     }
+    .input_container2{
+        display: flex;
+        position: relative;
+        align-items: center;
+    }
+    .input_container2 button{
+        position: absolute;
+        right: 10px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        top: calc(50% - 15px);
+    }
+    .input_container2 select{
+        border: 1px solid #E5EBF1;
+        border-radius: 5px;
+        background: #FFFFFF;
+        width: 90px;
+        height: 30px;
+        margin-left: 5px;
+        margin-right: 15px;
+        padding-left: 10px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+    }
+    .input_container2 p{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+    }
     #input2{
         display: flex;
         border: 1px solid #E5EBF1;
         border-radius: 5px;
         background: #FFFFFF;
         width: 100%;
-        height: 40px;
-        margin-top: 40px;
+        height: 30px;
+        margin-top: 9px;
         padding-left: 19px;
-        font-family: 'Jost';
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
@@ -353,8 +425,7 @@ section {
         flex-direction: column;
         width: 100%;
         height: 200px;
-        overflow-y: auto;  
-        font-family: 'Jost';
+        overflow-y: auto;
         font-style: normal;
         margin-bottom: 10px;
         font-weight: 500;
@@ -364,13 +435,12 @@ section {
         display: flex;
         flex-direction: column;
     }
-    .tbody_responsive{
+    #table_client_responsive tr{
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
         background: #FFFFFF;
-        font-family: 'Jost';
         font-style: normal;
         margin-bottom: 10px;
         padding: 4px;
@@ -382,16 +452,14 @@ section {
         height: 50px;
         border-radius: 5px;
     }
-    .tbody_responsive span{
-        font-family: 'Jost';
+    /* .tbody_responsive span{
         font-style: normal;
         font-weight: 500;
         font-size: 14px;
         line-height: 20px;
         color: #03C874;
-    }
-    #cpf, #data{
-        font-family: 'Jost';
+    } */
+    .cpf, #data{
         font-style: normal;
         font-weight: 500;
         font-size: 14px;
@@ -445,7 +513,6 @@ section {
         cursor: pointer;
     }
     #header_modal p{
-        font-family: 'Jost';
         font-style: normal;
         font-weight: 500;
         font-size: 24px;
@@ -460,7 +527,6 @@ section {
         top: 0;
     }
     label{
-        font-family: 'Jost';
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
@@ -473,7 +539,6 @@ section {
         height: 38px;
         padding-left: 15px;
         margin-bottom: 10px;
-        font-family: 'Jost';
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
@@ -518,7 +583,6 @@ section {
         align-items: center;
     }
     #header_modal_edit p{
-        font-family: 'Jost';
         font-style: normal;
         font-weight: 500;
         font-size: 24px;
@@ -544,7 +608,6 @@ section {
         margin-top: 30px;
         height: 38px;
         border-radius: 4px;
-        font-family: 'Jost';
         font-style: normal;
         font-weight: 700;
         font-size: 20px;
@@ -554,5 +617,11 @@ section {
     }
     .input_container{
         display: none;
+    }
+    .pagination2{
+        display: flex;
+        align-items: center;
+        justify-content: center;  
+        gap: 10px;
     }
 }

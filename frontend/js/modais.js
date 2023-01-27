@@ -1,24 +1,20 @@
 
 // Modal para mostrar detalhes dos clientes no Mobile
 
-const openModalDetails =  document.querySelector('#open_details')
-const openModalDetails2 =  document.querySelector('#open_details2')
-const openModalDetails3 =  document.querySelector('#open_details3')
-const openModalDetails4 =  document.querySelector('#open_details4')
-const openModalDetails5 =  document.querySelector('#open_details5')
+// const openModalDetails =  document.querySelector('.open_details')
 
-const closeModalDetails = document.querySelector('#close_details')
-const modal = document.querySelector('#modal')
-const fade = document.querySelector('#fade')
+// const closeModalDetails = document.querySelector('#close_details')
+// const modal = document.querySelector('#modal')
+// const fade = document.querySelector('#fade')
 
-const toggleModal = () => {
-    modal.classList.toggle("hide")
-    fade.classList.toggle("hide")
-}
+// const toggleModal = () => {
+//     modal.classList.toggle("hide")
+//     fade.classList.toggle("hide")
+// }
 
-[openModalDetails, openModalDetails2, openModalDetails3, openModalDetails4, openModalDetails5, closeModalDetails, fade].forEach(element => {
-    element.addEventListener("click", () => toggleModal())
-});
+// [openModalDetails, closeModalDetails, fade].forEach(element => {
+//     element.addEventListener("click", () => toggleModal())
+// });
 
 
 //----------------------------------------------------------------------
