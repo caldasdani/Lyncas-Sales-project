@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PressStart2.Domain.Commands.AdicionarVenda;
 using PressStart2.Domain.Commands.AtualizarVenda;
+using PressStart2.Domain.Commands.ListarCliente;
 using PressStart2.Domain.Commands.ListarVenda;
 using PressStart2.Domain.Commands.ObterVenda;
 using PressStart2.Domain.Commands.RemoverVenda;
@@ -31,11 +32,11 @@ namespace PressStart2.Api.Controllers
             return BadRequest(response);
         }
 
-
+        [ProducesResponseType(typeof(ListarVendaResponse), 200)]
         [HttpGet("listar")]
-        public async Task<IActionResult> Listar()
+        public async Task<IActionResult> Listar([FromQuery] ListarVendaRequest request)
         {
-            var listaVendas = await _mediator.Send(new ListarVendaRequest());
+            var listaVendas = await _mediator.Send(request);
             return Ok(listaVendas);
         }
 

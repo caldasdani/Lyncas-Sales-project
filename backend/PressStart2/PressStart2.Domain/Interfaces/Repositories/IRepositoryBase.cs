@@ -8,6 +8,7 @@ namespace PressStart2.Domain.Interfaces.Repositories
     {
         IEnumerable<TEntity> Listar();
         TEntity Obter(Guid id);
+        IQueryable<TEntity> Query();
         void Adicionar (TEntity entity);
         void Atualizar (TEntity entity);
         void Remover (TEntity entity);      

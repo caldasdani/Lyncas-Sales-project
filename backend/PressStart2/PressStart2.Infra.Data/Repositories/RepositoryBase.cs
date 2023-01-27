@@ -46,5 +46,10 @@ namespace PressStart2.Infra.Data.Repositories
         {
             _context.SaveChanges();
         }
+
+        public IQueryable<TEntity> Query() 
+        {
+            return DbSet.AsQueryable();
+        }
     }
 }

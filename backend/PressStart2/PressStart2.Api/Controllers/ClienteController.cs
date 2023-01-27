@@ -6,6 +6,7 @@ using PressStart2.Domain.Commands.ObterCliente;
 using PressStart2.Domain.Commands.RemoverCliente;
 using PressStart2.Domain.Commands.AtualizarCliente;
 using Microsoft.AspNetCore.Authorization;
+using prmToolkit.NotificationPattern;
 
 namespace PressStart2.Api.Controllers
 {
@@ -31,12 +32,12 @@ namespace PressStart2.Api.Controllers
         }
 
 
+        [ProducesResponseType(typeof(ListarClienteResponse), 200)]
         [HttpGet("listar")]
-
-        public async Task<IActionResult> Listar()
+        public async Task<IActionResult> Listar([FromQuery] ListarClienteRequest request)
         {
-            var listaClientes = await _mediator.Send(new ListarClienteRequest());
-                return Ok(listaClientes);
+            var listaClientes = await _mediator.Send(request);
+            return Ok(listaClientes);
         }
 
         [HttpGet("obter/{id}")]

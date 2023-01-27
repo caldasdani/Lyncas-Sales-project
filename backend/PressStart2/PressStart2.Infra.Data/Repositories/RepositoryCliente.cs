@@ -2,6 +2,7 @@
 using PressStart2.Domain.Entities;
 using PressStart2.Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
+using PressStart2.Domain.Commands.ListarCliente;
 
 namespace PressStart2.Infra.Data.Repositories
 {
@@ -11,6 +12,7 @@ namespace PressStart2.Infra.Data.Repositories
         {
 
         }
+
 
         public bool VerificaDuplicidade(string cpf)
         {

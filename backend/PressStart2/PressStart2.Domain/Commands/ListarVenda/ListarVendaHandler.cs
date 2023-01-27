@@ -1,9 +1,12 @@
-﻿using MediatR;
+﻿using AspNetCore.IQueryable.Extensions.Filter;
+using AspNetCore.IQueryable.Extensions.Pagination;
+using AspNetCore.IQueryable.Extensions.Sort;
+using MediatR;
 using PressStart2.Domain.Commands.ListarCliente;
 using PressStart2.Domain.DTOs;
 using PressStart2.Domain.Interfaces.Repositories;
 using prmToolkit.NotificationPattern;
-
+using System.Linq;
 
 namespace PressStart2.Domain.Commands.ListarVenda
 {
@@ -19,7 +22,7 @@ namespace PressStart2.Domain.Commands.ListarVenda
 
         public Task<CommandResponse> Handle(ListarVendaRequest request, CancellationToken cancellationToken)
         {
-            var ListaVendas = _repositoryVenda.ListarComDependencia();
+            var ListaVendas = _repositoryVenda.ListarComDependencia().Where(venda => venda.Cliente.Nome.Contains(request.ClienteNome)).Filter(request).Sort(request).Paginate(request).ToList();
 
             var ListaVendasResponse = ListaVendas.Select(venda => new ListarVendaResponse(
                 venda.Id,

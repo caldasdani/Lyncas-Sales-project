@@ -97,3 +97,4 @@ C:\Users\danie\source\repos\PressStart2\PressStart2.Api\obj\Debug\net6.0\PressSt
 C:\Users\danie\source\repos\PressStart2\PressStart2.Api\obj\Debug\net6.0\PressStart2.Api.genruntimeconfig.cache
 C:\Users\danie\source\repos\PressStart2\PressStart2.Api\obj\Debug\net6.0\ref\PressStart2.Api.dll
 C:\Users\danie\source\repos\PressStart2\PressStart2.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\danie\source\repos\PressStart2\PressStart2.Api\bin\Debug\net6.0\AspNetCore.IQueryable.Extensions.dll

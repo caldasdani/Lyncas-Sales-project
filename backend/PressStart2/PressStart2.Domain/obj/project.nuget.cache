@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "R0NXQ4LIe3qokV1bBhvoRwlIz08F2f56CV8N/xjmVTfmrUEdlfU+QiVvE2TBXKtxLxaMc7bq/jJqS6ItKba/2g==",
+  "dgSpecHash": "XgR4+CfuBt1Dj+efRmF8LbO1enn6epequxv1DqtCj+duPppnlSIdijOpdcZcVesDgDvcjxjfgw837FlSzQ27aA==",
   "success": true,
   "projectFilePath": "C:\\Users\\danie\\source\\repos\\PressStart2\\PressStart2.Domain\\PressStart2.Domain.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\danie\\.nuget\\packages\\aspnetcore.iqueryable.extensions\\7.0.0\\aspnetcore.iqueryable.extensions.7.0.0.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.0.0\\mediatr.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "C:\\Users\\danie\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",

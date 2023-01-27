@@ -26,10 +26,10 @@ namespace PressStart2.Infra.Data.Repositories
             return _context.VendaDbSet.Any(p => p.ClienteId == clienteId);
         }
 
-        public IEnumerable<Venda> ListarComDependencia()
+        public IQueryable<Venda> ListarComDependencia()
         {
-            return _context.VendaDbSet .Include(p => p.Cliente)
-                                       .AsEnumerable();
+            return _context.VendaDbSet.Include(p => p.Cliente).AsQueryable();
+                                       
         }
     }
 }

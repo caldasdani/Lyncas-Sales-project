@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "d9s3QyLlOcrEmib1bv9En4F17J/fD8fuZHuCUA94mSE2R0RYiiQqLbIWC4nYR0neHS73iKSheZRRjTU0Lt6JFw==",
+  "dgSpecHash": "GDkSAJnhTbo8PuHa+sK7Bzo18LaS/cQVbFuYoxfsiNaElK9/WoO4+mSwWzuq8odkbdEgHJfOd5T+rs0sqSCuPA==",
   "success": true,
   "projectFilePath": "C:\\Users\\danie\\source\\repos\\PressStart2\\PressStart2.Api\\PressStart2.Api.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\danie\\.nuget\\packages\\aspnetcore.iqueryable.extensions\\7.0.0\\aspnetcore.iqueryable.extensions.7.0.0.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
@@ -12,7 +13,7 @@
     "C:\\Users\\danie\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.0.0\\mediatr.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.12\\microsoft.aspnetcore.authentication.jwtbearer.6.0.12.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
-    "C:\\Users\\danie\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\danie\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\5.0.1\\microsoft.data.sqlclient.sni.runtime.5.0.1.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.0\\microsoft.entityframeworkcore.7.0.0.nupkg.sha512",

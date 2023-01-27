@@ -11,8 +11,8 @@ namespace PressStart2.Domain.Entities
 
         public Guid ClienteId { get; private set; }
         public int QuantidadeItens { get; private set; }
-        public DateTime DataVenda { get; private set; }
-        public DateTime DataFaturamento { get; private set; }
+        public DateTime DataVenda { get; private set; } = DateTime.Now.Date;
+        public DateTime DataFaturamento { get; private set; } = DateTime.Now.Date;
         public decimal ValorTotal { get; private set; }
         public virtual IEnumerable <VendaItem> Itens => _itens;
               //funçao de listagem mas sem tantas funcionalidades quanto a lista
@@ -30,7 +30,6 @@ namespace PressStart2.Domain.Entities
             QuantidadeItens = quantidadeItens;
             DataFaturamento = dataFaturamento;
             ValorTotal = valorTotal;
-            DataVenda = DateTime.Now;
             _itens = new();
 
             this.AdicionarVendaContract(); 
@@ -42,7 +41,6 @@ namespace PressStart2.Domain.Entities
             QuantidadeItens = quantidadeItens;
             DataFaturamento = dataFaturamento;
             ValorTotal = valorTotal;
-            DataVenda = DateTime.Now;
             _itens = new();
 
             this.AtualizarVendaContract();
